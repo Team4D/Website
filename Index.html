@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title>Team 4th Dimension</title>
+		<script type='text/javascript' src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
+        <script type='text/javascript' src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+        <script type='text/javascript' src='Scripts/Index.js'></script>
+		<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'/>
+		<link rel='stylesheet' href='CSS/Index.css'/>
+	</head>
+	<body>    
+		<div class="container">
+			<!-- Navbar -->
+			<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+						<a id="Home" class="navbar-brand" href="#Home-Page">Team 4th Dimension</a>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="home"><a class="page-link" href="#Home-Page">Home</a></li>
+							<li><a class="page-link" href="#About-Page">About</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects & Fun <span class="caret"></span></a>
+									<ul class="dropdown-menu" role="menu">
+										<li><a class="page-link" href="#LoLHelper-Page">LoL Helper</a></li>
+										<li><a href="SpaceInvaders/index.html">Space Invaders</a></li>
+									</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+			<!-- Content -->
+		<div class="container">
+			<div id="Home-Page" class="content-bit Home-Page">
+				<div class="jumbotron">
+					<h1 class="center">Team 4th Dimension</h1>
+					
+					  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					  </ol>
+
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+						<div class="item active">
+						  <img src="data:image/jpeg;base64,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" alt="...">
+						  <div class="carousel-caption">
+							Kitty
+						  </div>
+						</div>
+						<div class="item">
+						  <img src="Images/Cat2.png" alt="...">
+						  <div class="carousel-caption">
+							Cat
+						  </div>
+						</div>
+						<div class="item">
+						  <img src="Images/Cat3.png" alt="...">
+						  <div class="carousel-caption">
+							Pussy
+						  </div>
+						</div>
+					  </div>
+
+					  <!-- Controls -->
+					  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					  </a>
+					</div>
+					<p>
+					Fourth dimensional thinking. First class products.	
+					</p>
+				</div>
+				<p>
+				<!--Welcome to the Team 4th Dimension Home Page! Stuff should definitely be added here :) -->
+				</p>
+				<div class = "row">
+					<div class = "col-sm-3"><h5 class="page-header">Example</h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+					<div class = "col-sm-3"><h5 class="page-header">Example</h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+					<div class = "col-sm-3"><h5 class="page-header">Example</h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+					<div class = "col-sm-3"><h5 class="page-header">Example</h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</div>
+				</div>
+				<br> <br>
+				<div class = "row">
+					<div class = "col-sm-3"><h5 class="page-header">Example</h5> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+					<div class = "col-sm-3"><h5 class="page-header">Example</h5> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+					<div class = "col-sm-3"><h5 class="page-header">Example</h5> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+					<div class = "col-sm-3"><h5 class="page-header">Example</h5> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
+				</div>
+				
+			</div>
+			
+			<div id="About-Page" class="content-bit About-Page">
+				<p>
+				Team 4th Dimension are a group of programming enthusiasts who met in a class at KU. 
+				Though originally they began working together for a class project, they found that 
+				they worked well with one another and got along well. The majority of the team went 
+				on to work on the next class project which evolved past simply an assignment and and 
+				is currently being developed into the Android application "LoL Helper".
+				<br /> <br />
+				//TODO: Make this page better. Make the story better too.
+				</p>
+			</div>
+			
+			<div id="LoLHelper-Page" class="content-bit LoLHelper-Page">
+				<div class = "row">
+					<h3 class="visible-xs">Team Builder</h3><div class="col-sm-4"><img src="Images/ssteambuilder.png"></div><div class="col-sm-8 left-text"><h3 class="hidden-xs">Team Builder</h3><br class="visible-xs" /><br class="visible-xs" /><p>A LoL Helper exclusive, Team Builder will help you choose champions that work well together. Enter a couple champions that have already been selected and have it recommend who else would be a good pick, or recommend a playstyle.</p></div>
+				</div>
+				<br>
+				<div class = "row">
+					<h3 class="visible-xs">Player Statistics</h3><div class="col-sm-4 col-sm-push-8"><img src="Images/sslookup.png" width="200"></div><div class="col-sm-8 col-sm-pull-4 right-text"><h3 class="hidden-xs">Player Statistics</h3><br class="visible-xs" /><br class="visible-xs" /><p>Enter a summoner name and view their stats, including statistics for temporary game modes such as One For All and U.R.F.</p></div>
+				</div>
+				<br>
+				<div class = "row">
+					<h3 class="visible-xs">Counters</h3><div class="col-sm-4"><img src="Images/sscounters.png"></div><div class="col-sm-8 left-text"><h3 class="hidden-xs">Counters</h3><br class="visible-xs" /><br class="visible-xs" /><p>Look up who counters and is countered by a champion, so you can have an advantage over your opponent.</p></div>
+				</div>
+				<br>
+				<div class = "row">
+					<h3 class="visible-xs">Ultimate Bravery</h3><div class="col-sm-4 col-sm-push-8"><img src="Images/ssultimatebravery.png" width="200"></div><div class="col-sm-8 col-sm-pull-4 right-text"><h3 class="hidden-xs">Ultimate Bravery</h3><br class="visible-xs" /><br class="visible-xs" /><p>Click the button to be given a random champion and a random build for a fun game mode.</p></div>
+				</div>
+				<br>
+				<div class = "row">
+					<h3 class="visible-xs">Build Guides</h3><div class="col-sm-4"><img src="Images/ssbuildguides.png"></div><div class="col-sm-8 left-text"><h3 class="hidden-xs">Build Guides</h3><br class="visible-xs" /><br class="visible-xs" /><p>Not sure what items to buy on a new champion? Consult our custom build guides for help.</p></div>
+				</div>
+				<br>
+				<div class = "row">
+					<h3 class="visible-xs">Jungle Timers</h3><div class="col-sm-4 col-sm-push-8"><img src="Images/sstimers.png" width="200"></div><div class="col-sm-8 col-sm-pull-4 right-text"><h3 class="hidden-xs">Jungle Timers</h3><br class="visible-xs" /><br class="visible-xs" /><p>Keep track of when jungle monsters will spawn. LoL Helper gives you audio and visual cues for each camp as spawn time draws nearer.</p></div>
+				</div>
+				<br>
+				<div class = "row">
+					<h3 class="visible-xs">General Info</h3><div class="col-sm-4"><img src="Images/sschampioninfo.png"></div><div class="col-sm-8 left-text"><h3 class="hidden-xs">General Info</h3><br class="visible-xs" /><br class="visible-xs" /><p>Look up detailed information on champions, items, and summoner spells so that you can plan strategies for your next game.</p></div>
+				</div>
+			</div>
+
+		</div>
+		    <div id="footer">
+			<center>
+		&copy; Team 4th Dimension 2014 | Email | Phone | Mail
+		<br>
+		This website is under construction
+		<br>
+		Web design by Team 4th Dimension
+		</center>
+    </div>
+	</body>
+</html>

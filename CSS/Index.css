@@ -1,0 +1,100 @@
+html, body {
+	background-color: #CCC;
+	min-height: 100%;
+}
+
+.container {
+	background-color: #AAA;
+	min-height: 100%;
+}
+
+.content-bit {
+	display: none;
+}
+
+.content-bit:target {
+	margin-top: -70px;
+	padding-top: 70px;
+	display: block;
+}
+
+.jumbotron {
+	background-color: #999;
+	text-align: center;
+}
+
+h1, h2, h3, h4, h6 {
+	color: #000 !important; /* Supposed to be a bad practice, but screw it*/
+}
+
+h5 {
+	text-align: center;
+}
+
+h3 {
+	padding-left: 28px;
+}
+
+.content-bit p {
+	margin-left: 2em;
+}
+
+img {
+	display: block;
+	margin: auto;
+}
+
+.page-header {
+	border-bottom: 1px solid #666;
+}
+
+#footer {
+	padding-top: 5px;
+}
+
+.right-text {
+	text-align: right;
+}
+
+.left-text {
+	text-align: left;
+}
+
+@media (max-width: 767px) { /* Styling for small screens */
+	.right-text {
+		text-align: center;
+	}
+
+	.left-text {
+		text-align: center;
+	}
+	
+	.visible-xs {
+		text-align: center;
+	}
+}
+
+.navbar {
+	height: 50px;
+}
+
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-nav>li>ul>li>a {
+	background-color: #222;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>ul>li>a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus {
+	background-color: #222;
+}
+
+.in, .collapsing, .dropdown-menu {
+	background-color: #222;
+	color: #777;
+}
+
+.dropdown-menu>li>a {
+	color: #777;
+}
+
+.dropdown-menu {
+	border: 0px;
+}
