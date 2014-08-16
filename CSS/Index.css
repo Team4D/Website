@@ -23,11 +23,11 @@ html, body {
 	text-align: center;
 }
 
-h1, h2, h3, h4, h6 {
+h1, h2, h3, h6 {
 	color: #000 !important; /* Supposed to be a bad practice, but screw it*/
 }
 
-h5 {
+h5, h4 {
 	text-align: center;
 }
 
@@ -97,4 +97,13 @@ img {
 
 .dropdown-menu {
 	border: 0px;
+}
+
+.full-img {
+	margin-left: -15px;
+}
+
+#about {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
