@@ -4,6 +4,14 @@ html, body {
 	position: relative;
 }
 
+#footer {
+	text-align: center;
+}
+
+#footer img {
+	display: inline-block;
+}
+
 .container {
 	background-color: #CCC;
 	min-height: 100%;
@@ -22,6 +30,10 @@ html, body {
 .jumbotron {
 	background-color: #999;
 	text-align: center;
+}
+
+h2 {
+	font-size: 24px;
 }
 
 h1, h2, h3, h6 {
