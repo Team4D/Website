@@ -1,10 +1,11 @@
 html, body {
-	background-color: #CCC;
+	background-color: #222;
 	min-height: 100%;
+	position: relative;
 }
 
 .container {
-	background-color: #AAA;
+	background-color: #CCC;
 	min-height: 100%;
 }
 
@@ -32,7 +33,9 @@ h5, h4 {
 }
 
 h3 {
-	padding-left: 28px;
+	margin-left: 28px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #333;
 }
 
 .content-bit p {
@@ -49,7 +52,9 @@ img {
 }
 
 #footer {
-	padding-top: 5px;
+	padding: 15px;
+	color: #CCC;
+	background-color: #222;
 }
 
 .right-text {
@@ -76,6 +81,7 @@ img {
 
 .navbar {
 	height: 50px;
+	margin-bottom: 0;
 }
 
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-nav>li>ul>li>a {
@@ -83,7 +89,8 @@ img {
 }
 
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>ul>li>a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus {
-	background-color: #222;
+	background-color: #000;
+	color:#FFF;
 }
 
 .in, .collapsing, .dropdown-menu {
@@ -107,3 +114,13 @@ img {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+
+/* DARK VERSION */
+.row-even {
+	background-color:#BBB;
+	color:#333;
+}
+/* LIGHT VERSION */
+/*.row-even {
+	background-color:#BBB;
+}*/
