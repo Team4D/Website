@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$("li").click(function() {
-		if ($(this).hasClass("dropdown-toggle")) {
+		if ($(this).hasClass("dropdown")) {
 			return;
 		}
 		$("li").removeClass("active");
@@ -14,10 +14,20 @@ $(document).ready(function(){
 	});
 	
 	$(".dropdown-item").click(function() { // Closes navbar on small screens when navigating to new page
-		$("#xsbutton").click();
+		if ($("#headnavbar").hasClass("in")) {
+			$("#xsbutton").click();
+		}
 	});
 	
+	var openPage = false;
+	var urlstring = document.URL;
+	var urllength = urlstring.length;
+	if (urlstring.substring(urllength-5, urllength) == "-Page") {
+		openPage = true;
+	}
 	// Open up the home page
-	$(".home").addClass("active"); 
-	window.location = $("#Home").attr("href");
+	if (openPage === false) {
+		$(".home").addClass("active"); 
+		window.location = $("#Home").attr("href");
+	}
 });

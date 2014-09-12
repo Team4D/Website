@@ -1,0 +1,146 @@
+html, body {
+	background-color: #222;
+	min-height: 100%;
+	position: relative;
+}
+
+#footer {
+	text-align: center;
+}
+
+#footer img {
+	display: inline-block;
+}
+
+.container {
+	background-color: #CCC;
+	min-height: 100%;
+}
+
+.content-bit {
+	display: none;
+}
+
+.content-bit:target {
+	margin-top: -70px;
+	padding-top: 70px;
+	display: block;
+}
+
+.jumbotron {
+	background-color: #BBB;
+	text-align: center;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h1, h2, h3, h6 {
+	color: #000 !important; /* Supposed to be a bad practice, but screw it*/
+}
+
+h5, h4 {
+	text-align: center;
+}
+
+h3 {
+	margin-left: 28px;
+	padding-bottom: 3px;
+	border-bottom: 1px solid #333;
+}
+
+.content-bit p {
+	margin-left: 2em;
+}
+
+#wrap {
+    float: left;
+    position: relative;
+    left: 50%;
+}
+
+#content {
+    float: left;
+    position: relative;
+    left: -50%;
+}
+
+.page-header {
+	border-bottom: 1px solid #666;
+}
+
+#footer {
+	padding: 15px;
+	color: #CCC;
+	background-color: #222;
+	clear: both;
+}
+
+.right-text {
+	text-align: right;
+}
+
+.left-text {
+	text-align: left;
+}
+
+@media (max-width: 767px) { /* Styling for small screens */
+	.right-text {
+		text-align: center;
+	}
+
+	.left-text {
+		text-align: center;
+	}
+	
+	.visible-xs {
+		text-align: center;
+	}
+}
+
+.navbar {
+	height: 50px;
+	margin-bottom: 0;
+}
+
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-nav>li>ul>li>a {
+	background-color: #222;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>ul>li>a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus {
+	background-color: #000;
+	color:#FFF;
+}
+
+.in, .collapsing, .dropdown-menu {
+	background-color: #222;
+	color: #777;
+}
+
+.dropdown-menu>li>a {
+	color: #777;
+}
+
+.dropdown-menu {
+	border: 0px;
+}
+
+.full-img {
+	margin-left: -15px;
+}
+
+#about {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* DARK VERSION */
+.row-even {
+	background-color:#BBB;
+	color:#333;
+}
+/* LIGHT VERSION */
+/*.row-even {
+	background-color:#BBB;
+}*/
