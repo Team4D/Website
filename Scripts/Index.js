@@ -13,5 +13,11 @@ $(document).ready(function(){
 		window.location = $("#Home").attr("href");
 	});
 	
-	$("#Home").click();
+	$(".dropdown-item").click(function() { // Closes navbar on small screens when navigating to new page
+		$("#xsbutton").click();
+	});
+	
+	// Open up the home page
+	$(".home").addClass("active"); 
+	window.location = $("#Home").attr("href");
 });
