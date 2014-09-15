@@ -11,6 +11,11 @@ $(document).ready(function(){
 		$("li").removeClass("active");
 		$(".home").addClass("active");
 		window.location = $("#Home").attr("href");
+		$("#carousel-button-1").click();
+	});
+	
+	$(".home").click(function() {
+		$("#carousel-button-1").click();
 	});
 	
 	$(".dropdown-item").click(function() { // Closes navbar on small screens when navigating to new page
@@ -24,10 +29,12 @@ $(document).ready(function(){
 	var urllength = urlstring.length;
 	if (urlstring.substring(urllength-5, urllength) == "-Page") {
 		openPage = true;
+		$("#carousel-button-1").click();
 	}
 	// Open up the home page
 	if (openPage === false) {
 		$(".home").addClass("active"); 
 		window.location = $("#Home").attr("href");
+		$("#carousel-button-1").click();
 	}
 });

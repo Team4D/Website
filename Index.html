@@ -10,7 +10,7 @@
 		<link rel='stylesheet' href='CSS/Index.css'/>
 	</head>
 	<body>    
-<div style="background-color:#333;">
+<div id="bodywrapper">
 			<!-- Navbar -->
 			<div class="navbar navbar-inverse navbar-static-top" role="navigation">
 				<div class="container" style="background-color:transparent;">
@@ -45,12 +45,12 @@
 				<div class="jumbotron">
 					<h1 class="center">Team 4th Dimension</h1>
 					
-					  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					  <div id="carousel-main" class="carousel slide" data-ride="carousel">
 					  <!-- Indicators -->
 					  <ol class="carousel-indicators">
-						<li class="carslide" data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						<li class="carslide" data-target="#carousel-example-generic" data-slide-to="1"></li>
-						<li class="carslide" data-target="#carousel-example-generic" data-slide-to="2"></li>
+						<li id="carousel-button-1" class="carslide" data-target="#carousel-main" data-slide-to="0" class="active"></li>
+						<li id="carousel-button-2" class="carslide" data-target="#carousel-main" data-slide-to="1"></li>
+						<li id="carousel-button-3" class="carslide" data-target="#carousel-main" data-slide-to="2"></li>
 					  </ol>
 
 					  <!-- Wrapper for slides -->
@@ -76,10 +76,10 @@
 					  </div>
 
 					  <!-- Controls -->
-					  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					  <a class="left carousel-control" href="#carousel-main" role="button" data-slide="prev">
 						<span class="glyphicon glyphicon-chevron-left"></span>
 					  </a>
-					  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					  <a class="right carousel-control" href="#carousel-main" role="button" data-slide="next">
 						<span class="glyphicon glyphicon-chevron-right"></span>
 					  </a>
 					</div>
@@ -105,23 +105,20 @@
 			</div>
 			
 			<div id="About-Page" class="content-bit About-Page">
-				<div class="row">
+				<div class="row row-odd row-first">
 					<h3 class="visible-xs">Designed from the Top Down</h3>
 					<div class="col-sm-4">
-						<img src="Images/about1lg.jpg" alt="A New Whiteboard Pic" />
+						<img src="Images/about1lg.jpg" alt="A New Whiteboard Pic" class="row-img" />
 					</div>
 					<div class="col-sm-8 left-text">
 						<h3 class="hidden-xs">Designed from the Top Down</h3>
-						<br class="visible-xs" />
-						<br class="visible-xs" />
 						<p>Our process begins with a deep brainstorming session. We meet with each person involved in the process&mdash;from your team and ours&mdash;to have their individual input included. This master list is then pared down, separating the chaff from the wheat, and expanded upon to create the abstract overview of tasks to complete the project.</p>
 					</div>
 				</div>
-				<br />
 				<div class="row row-even">
 					<h3 class="visible-xs">Built from the Ground Up</h3>
 					<div class="col-sm-4 col-sm-push-8">
-						<img src="Images/about2lg.jpg" alt="Team Computing Pic" />
+						<img src="Images/about2lg.jpg" alt="Team Computing Pic" class="row-img" />
 					</div>
 					<div class="col-sm-8 col-sm-pull-4 right-text">
 						<h3 class="hidden-xs">Built from the Ground Up</h3>
@@ -130,11 +127,10 @@
 						<p>After that introductory meeting, we break into teams to attack the generated task list head on. Each sub team is tasked with a single slice of the overarching task outline. By taking each part of the whole and treating it as a module we not only create a more functional end product, we complete it so fast that you'll wonder why you didn't come to us sooner.</p>
 					</div>
 				</div>
-				<br />
-				<div class="row">
+				<div class="row row-odd row-last">
 					<h3 class="visible-xs">Dynamic Convergence</h3>
 					<div class="col-sm-4">
-						<img src="Images/about3lg.jpg" alt="Meeting Room Pic" />
+						<img src="Images/about3lg.jpg" alt="Meeting Room Pic" class="row-img" />
 					</div>
 					<div class="col-sm-8 left-text">
 						<h3 class="hidden-xs">Dynamic Convergence</h3>
@@ -143,53 +139,84 @@
 						<p>Keeping our sub teams informed at weekly meetings is a way for us to reconnect as a group to make certain that the product is made right the first time. Conferences with our clients connect them in the process, allowing you the chance to voice any and all concerns with our knowledgeable staff. A staff who knows how to speak both computer jargon and plain language fluently.</p>
 					</div>
 				</div>
-				<br />
 			</div>
 			
 			<div id="LoLHelper-Page" class="content-bit LoLHelper-Page">
-				<div class = "row">
-					<h3 class="visible-xs">Team Builder</h3><div class="col-sm-4"><img src="Images/ssteambuilder.png"></div><div class="col-sm-8 left-text"><h3 class="hidden-xs">Team Builder</h3><br class="visible-xs" /><br class="visible-xs" /><p>A LoL Helper exclusive, Team Builder helps you choose champions that work well as a team.  Select a few champions that your team has chosen and our system will recommend which other champs will be a match.  If you're more advanced, then you can also select a play style to receive a set of champions custom tailored to make it so.</p></div>
+				<div class="row row-odd row-first">
+					<h3 class="visible-xs">Team Builder</h3>
+					<div class="col-sm-4"><img src="Images/ssteambuilder.png" class="row-img img-tall"></div>
+					<div class="col-sm-8 left-text">
+						<h3 class="hidden-xs">Team Builder</h3>
+						<p>A LoL Helper exclusive, Team Builder helps you choose champions that work well as a team. Select a few champions that your team has chosen and our system will recommend which other champs will be a match. If you're more advanced, then you can also select a play style to receive a set of champions custom tailored to make it so.</p>
+					</div>
 				</div>
-				<br>
-				<div class = "row row-even">
-				<br>
-					<h3 class="visible-xs">Player Statistics</h3><div class="col-sm-4 col-sm-push-8"><img src="Images/sslookup.png"><br></div><div class="col-sm-8 col-sm-pull-4 right-text"><h3 class="hidden-xs">Player Statistics</h3><br class="visible-xs" /><br class="visible-xs" /><p>Every player wants to know how they measure up against their prey.  Player statistics lets you look up a player by summoner name and check out their statistics, even stats for temporary game modes like One For All or U.R.F. are included. </p></div>
+				<div class="row row-even">
+					<h3 class="visible-xs">Player Statistics</h3>
+					<div class="col-sm-4 col-sm-push-8"><img src="Images/sslookup.png" class="row-img img-tall"></div>
+					<div class="col-sm-8 col-sm-pull-4 right-text">
+						<h3 class="hidden-xs">Player Statistics</h3>
+						<p>Every player wants to know how they measure up against their prey. Player statistics lets you look up a player by summoner name and check out their statistics, even stats for temporary game modes like One For All or U.R.F. are included. </p>
+					</div>
 				</div>
-				<br>
-				<div class = "row">
-					<h3 class="visible-xs">Counters</h3><div class="col-sm-4"><img src="Images/sscounters.png"></div><div class="col-sm-8 left-text"><h3 class="hidden-xs">Counters</h3><br class="visible-xs" /><br class="visible-xs" /><p>Maybe you see the champions on the other team and wet your pants.  Fight that fear with the knowledge of who counters any champion.  Or look up your own champion and see who you should steer clear of.  </p></div>
+				<div class="row row-odd">
+					<h3 class="visible-xs">Counters</h3>
+					<div class="col-sm-4"><img src="Images/sscounters.png" class="row-img img-tall"></div>
+					<div class="col-sm-8 left-text">
+						<h3 class="hidden-xs">Counters</h3>
+						<p>Maybe you see the champions on the other team and wet your pants. Fight that fear with the knowledge of who counters any champion. Or look up your own champion and see who you should steer clear of.</p>
+					</div>
 				</div>
-				<br>
-				<div class = "row row-even">
-				<br>
-					<h3 class="visible-xs">Ultimate Bravery</h3><div class="col-sm-4 col-sm-push-8"><img src="Images/ssultimatebravery.png"><br></div><div class="col-sm-8 col-sm-pull-4 right-text"><h3 class="hidden-xs">Ultimate Bravery</h3><br class="visible-xs" /><br class="visible-xs" /><p>Feeling brave?  Click the ultimate random button and you'll be given a champion and build.  Maybe you find a new favorite, maybe you get destroyed.  The randomizer will pick any item for any champion, that's more than 6 Quadrillion choices.  Are you feeling lucky?</p></div>
+				<div class="row row-even">
+					<h3 class="visible-xs">Ultimate Bravery</h3>
+					<div class="col-sm-4 col-sm-push-8"><img src="Images/ssultimatebravery.png" class="row-img img-tall"></div>
+					<div class="col-sm-8 col-sm-pull-4 right-text">
+						<h3 class="hidden-xs">Ultimate Bravery</h3>
+						<p>Feeling brave? Click the ultimate random button and you'll be given a champion and build. Maybe you find a new favorite, maybe you get destroyed. The randomizer will pick any item for any champion, that's more than 6 Quadrillion choices. Are you feeling lucky?</p>
+					</div>
 				</div>
-				<br>
-				<div class = "row">
-					<h3 class="visible-xs">Build Guides</h3><div class="col-sm-4"><img src="Images/ssbuildguides.png"></div><div class="col-sm-8 left-text"><h3 class="hidden-xs">Build Guides</h3><br class="visible-xs" /><br class="visible-xs" /><p>If you're playing a new champion, picking the wrong item could ruin your day.  Take guess work out of the equation by looking up a build guide.  We've got them all.</p></div>
+				<div class="row row-odd">
+					<h3 class="visible-xs">Build Guides</h3>
+					<div class="col-sm-4"><img src="Images/ssbuildguides.png" class="row-img img-tall"></div>
+					<div class="col-sm-8 left-text">
+						<h3 class="hidden-xs">Build Guides</h3>
+						<p>If you're playing a new champion, picking the wrong item could ruin your day. Take guess work out of the equation by looking up a build guide. We've got them all.</p>
+					</div>
 				</div>
-				<br>
-				<div class = "row row-even">
-				<br>
-					<h3 class="visible-xs">Jungle Timers</h3><div class="col-sm-4 col-sm-push-8"><img src="Images/sstimers.png"><br></div><div class="col-sm-8 col-sm-pull-4 right-text"><h3 class="hidden-xs">Jungle Timers</h3><br class="visible-xs" /><br class="visible-xs" /><p>Did you kill those golems 4 minutes ago or have they respawned already?  Better set an alarm.  Using our jungle timers will give you a reliable alarm for jungle spawns, freeing you to decimate your opponents in the lane and be back in time for your golem friends.  Surely, they'll be glad to see you.</p></div>
+				<div class="row row-even">
+					<h3 class="visible-xs">Jungle Timers</h3>
+					<div class="col-sm-4 col-sm-push-8"><img src="Images/sstimers.png" class="row-img img-tall"></div>
+					<div class="col-sm-8 col-sm-pull-4 right-text">
+						<h3 class="hidden-xs">Jungle Timers</h3>
+						<p>Did you kill those golems 4 minutes ago or have they respawned already? Better set an alarm. Using our jungle timers will give you a reliable alarm for jungle spawns, freeing you to decimate your opponents in the lane and be back in time for your golem friends. Surely, they'll be glad to see you.</p>
+					</div>
 				</div>
-				<br>
-				<div class = "row">
-					<h3 class="visible-xs">General Info</h3><div class="col-sm-4"><img src="Images/sschampioninfo.png"></div><div class="col-sm-8 left-text"><h3 class="hidden-xs">General Info</h3><br class="visible-xs" /><br class="visible-xs" /><p>General Info does what it says on the tin.  We put detailed information on all the champions, items, and summoner spells in one place.  Research anything your heart desires between matches.  You want information?  Have all the information.</p></div>
+				<div class="row row-odd">
+					<h3 class="visible-xs">General Info</h3>
+					<div class="col-sm-4"><img src="Images/sschampioninfo.png" class="row-img img-tall"></div>
+					<div class="col-sm-8 left-text">
+						<h3 class="hidden-xs">General Info</h3>
+						<p>General Info does what it says on the tin. We put detailed information on all the champions, items, and summoner spells in one place. Research anything your heart desires between matches. You want information? Have all the information.</p>
+					</div>
 				</div>
 			</div>
-
 		</div>
- </div>
+	</div>
 		    <div id="footer">
-		&copy; Team 4th Dimension 2014 | <a href="mailto:seanstout@team4d.org">Email</a> | Phone | Mail
-		<br>
-		This website is under construction
-		<br>
-		Web design by Team 4th Dimension
-		<br>
-                                                      <!--Added in some cleaned up images without white background for the footer -->
-		<a target="blank" href="http://www.facebook.com/TeamFourthDimension"><img src="Images/fb_logo.png"></a>&nbsp;<a target="blank" href="http://twitter.com/OfficialTeam4D"><img src="Images/twitter_logo.png"></a>
-    </div>
+				&copy; Team 4th Dimension 2014 | <a href="mailto:seanstout@team4d.org">Email</a> | Phone | Mail
+				<br>
+				This website is under construction
+				<br>
+				Web design by Team 4th Dimension
+				<br>
+															  <!--Added in some cleaned up images without white background for the footer -->
+				<a target="blank" href="http://www.facebook.com/TeamFourthDimension"><img src="Images/fb_logo.png"></a>&nbsp;<a target="blank" href="http://twitter.com/OfficialTeam4D"><img src="Images/twitter_logo.png"></a>
+					<br><br>
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="SDVF2B5Q4ALFG">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</div>
 	</body>
 </html>
