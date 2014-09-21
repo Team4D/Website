@@ -33,7 +33,7 @@ html, body {
 	margin: auto;
 }
 
-#spacer {
+.spacer {
 	height: 5px;
 	background-color: #1D3;
 }
