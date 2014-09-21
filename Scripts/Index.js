@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	$('.carousel').carousel();
+	
 	$("li").click(function() {
 		if ($(this).hasClass("dropdown")) {
 			return;
