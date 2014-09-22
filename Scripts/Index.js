@@ -33,6 +33,9 @@ $(document).ready(function(){
 		openPage = true;
 		$("#carousel-button-1").click();
 	}
+	if (urlstring.substring(urllength-9, urllength) == "Home-Page") {
+		$(".home").addClass("active");
+	}
 	// Open up the home page
 	if (openPage === false) {
 		$(".home").addClass("active"); 

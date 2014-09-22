@@ -60,8 +60,8 @@ div {
 }
 
 .content-bit:target {
-	margin-top: -50px;
-	padding-top: 50px;
+	margin-top: -200px;
+	padding-top: 200px;
 	display: block;
 }
 
@@ -210,10 +210,10 @@ img {
 	padding:10px 0px;
 }
 .row-first {
-	padding-top: 0;
+	padding-top: 10px;
 }
 .row-last {
-	padding-bottom: 0;
+	padding-bottom: 10px;
 }
 /* LIGHT VERSION */
 /*.row-even {
