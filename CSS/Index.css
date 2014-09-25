@@ -29,6 +29,7 @@ html, body {
 }
 
 #bodywrapper {
+	min-width: 1199px;
 	width: 75%;
 	margin: auto;
 }
@@ -142,12 +143,14 @@ img {
 	background-color: #064660;
 	margin-bottom: 5px;
 }
+
 .nav {
 	position: absolute;
 	bottom: 0;
 	right: 100px;
 	font-size: 16px;
 }
+
 .navbar-nav>li>a {
 	padding: 10px 15px;
 }
@@ -270,8 +273,29 @@ img {
 		float: none;
 	}
 }
+
+@media (max-width: 768px) {
+	.nav {
+		margin-top: 0px;
+		margin-bottom: 0px;
+		position: static;
+		bottom: 0;
+		right: 0;
+		font-size: 16px;
+	}
+	
+	.navbar-brand  {
+		z-index: 50;
+	}
+	
+	.in, .collapsing, .dropdown-menu {
+		border-top: none;
+		margin-top: 30px;
+	}
+}
 @media (max-width: 1199px) {
 	#bodywrapper {
+		min-width: 100%;
 		width: 100%;
 	}
 }
