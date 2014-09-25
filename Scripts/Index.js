@@ -57,8 +57,16 @@ $(document).ready(function(){
 	}
 	// Open up the home page
 	if (openPage === false) {
-		$(".home").addClass("active"); 
 		window.location = $("#Home").attr("href");
 		$("#carousel-button-1").click();
+		$(".home").addClass("active"); 
 	}
+	
+	$(".home").click(function() {
+		$(".home").addClass("active"); 
+	});
+	
+	$("#Home").click(function() {
+		$(".home").addClass("active"); 
+	});
 });
