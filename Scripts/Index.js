@@ -1,6 +1,11 @@
 $(document).ready(function(){
 	$('.carousel').carousel();
 	
+	$('#myTab a').click(function (e) {
+		e.preventDefault();
+		$(this).tab('show');
+	})
+	
 	$("li").click(function() {
 		if ($(this).hasClass("dropdown")) {
 			return;
@@ -25,6 +30,20 @@ $(document).ready(function(){
 			$("#xsbutton").click();
 		}
 	});
+	
+	$(".tbox").click(function(){
+		var slideID = $(this).attr("id");
+		slideID = slideID.slice(-1);
+		$("#carousel-button-"+slideID).click();
+	});
+	
+	
+	$('#carousel-main').on('slid.bs.carousel',function(){
+		var slideNum = Number($("#carousel-main .active:first").attr("data-slide-to"))+1;
+		$(".tbox").removeClass("active");
+		$("#main-text-"+slideNum).addClass("active");
+		$("#carousel-button-"+x).click();
+	})
 	
 	var openPage = false;
 	var urlstring = document.URL;

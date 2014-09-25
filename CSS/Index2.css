@@ -1,5 +1,5 @@
 html, body {
-	background-color: #E6E6E6;
+	background-color: #064660;
 	height: 100%;
 	color: #FFF;
 }
@@ -17,8 +17,7 @@ html, body {
 	text-align: center;
 	padding-top: 10px;
 	color: #f8f8f8;
-	background-color: #064660;
-	margin-top: 5px;
+	background-color: #064660; /*#003153;*/
 }
 
 #pagetop {
@@ -29,7 +28,8 @@ html, body {
 }
 
 #bodywrapper {
-	width: 75%;
+	background-color:#1e8fbe;
+	width: 65%;
 	margin: auto;
 }
 
@@ -39,7 +39,7 @@ html, body {
 }
 
 div {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 #bodywrapper:after {
@@ -69,29 +69,17 @@ div {
 	background-color: #1e8fbe;
 	text-align: center;
 	padding: 0px;
-	margin-bottom: 5px;
+	margin-bottom: 0px;
 }
 
 .tbox {
 	margin-top: 15px;
 	margin-top: 0px;
-	padding-top: 20px;
 	padding-bottom: 35px;
-	text-align: center;
-	background-color: #1E8FBE;
-	cursor: pointer;
 }
 .tbox h4 {
 	margin-top: 0;
 	padding-top: 10px;
-}
-.tbox.active h4 {
-	color: #00431D;
-	border-bottom: 1px solid #00431D;
-}
-.tbox.active {
-	background-color: #82CD73;
-	color: #00431D;
 }
 
 h5, h4 {
@@ -99,9 +87,16 @@ h5, h4 {
 	font-size: 22px;
 }
 
-#main-text-2 {
-	border-left: 5px solid #E6E6E6;
-	border-right: 5px solid #E6E6E6;
+#main-text-two {
+	background-color: #FFAD00;
+}
+
+#main-text-one {
+	background-color: #F94D00;
+}
+
+#main-text-three {
+	background-color: #FF8500;
 }
 
 .row {
@@ -138,28 +133,18 @@ img {
 }
 
 .navbar {
-	height: 75px;
-	background-color: #064660;
-	margin-bottom: 5px;
+	height: 50px;
+	/*background-color: #002543;*/
+	margin-bottom: 0;
 }
-.nav {
-	position: absolute;
-	bottom: 0;
-	right: 100px;
-	font-size: 16px;
+
+.navbar-default {
+	border-bottom: 5px solid #1D3;
 }
-.navbar-nav>li>a {
-	padding: 10px 15px;
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	background-color: #A2EADB;
-	color: #555555;
-}
-.navbar-default .navbar-nav > li > a {
-	color: #82CD73;
-}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-	color: #FFF;
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	border-bottom: 5px solid #1D3;
+	height: 50px;
 }
 
 .carousel {
@@ -173,26 +158,25 @@ img {
 	background-color: #1e8fbe;
 	margin-bottom: 15px;
 }
-/*  -- Would be used for styling the dropdown*/
+/*  -- Would be used for styling the dropdown
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-nav>li>ul>li>a {
-	background-color: #A2EADB;
+	background-color: #222;
 }
 
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>ul>li>a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus {
-	background-color: #A2EADB;
-	color:#555;
+	background-color: #000;
+	color:#FFF;
 }
 
 .in, .collapsing, .dropdown-menu {
-	background-color: #E6E6E6;
-	color: #555;
+	background-color: #222;
+	color: #777;
 }
 
 .dropdown-menu>li>a {
-	color: #555;
+	color: #777;
 }
-
-
+*/
 .dropdown-menu {
 	border: 0px;
 }
@@ -216,48 +200,46 @@ img {
 	padding-bottom: 10px;
 }
 
+/* DARK VERSION */
 .row-even {
 	background-color: #50b2e9;
-	color: #333;
+	color:#333;
 	padding: 10px 0px;
-	margin-top: 5px;
 }
 .row-odd {
 	padding:10px 0px;
-	margin-top: 5px;
-	color: #333;
-	background-color: rgba(166, 208, 231, 1);
 }
 .row-first {
 	padding-top: 10px;
-	margin-top: 0;
 }
 .row-last {
 	padding-bottom: 10px;
 }
+/* LIGHT VERSION */
+/*.row-even {
+	background-color:#BBB;
+}*/
 
 @media (max-width: 767px) { /* Styling for small screens */
 	.right-text {
 		text-align: center;
 	}
+
 	.left-text {
 		text-align: center;
 	}
+	
 	.visible-xs {
 		text-align: center;
 	}
+	
 	.row-img {
 		margin-bottom: 10px;
 	}
+	
 	.subhead {
 		padding-left: 0px;
 		padding-right: 0px;
-	}
-	.tbox {
-		border: 0px !important;
-	}
-	#main-text-2 {
-		margin: 5px 0px;
 	}
 }
 @media (min-width: 768px) {

@@ -9,322 +9,331 @@
 		<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'/>
 		<link rel='stylesheet' href='CSS/Index.css'/>
 	</head>
-	<body>    
-			<!-- Navbar -->
-			<div id="pagetop"></div>
-			<div class="navbar navbar-default navbar-static-top" role="navigation">
-				<div class="container" style="background-color:transparent;">
-					<div class="navbar-header">
+	
+	<body>
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=481129018566168&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- Content -->
+	<div id="bodywrapper">
+		<!-- Navbar -->
+		<div class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container" style="background-color:transparent;">
+				<div class="navbar-header">
 					<button id="xsbutton" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-						<a id="Home" class="navbar-brand" href="#Home-Page">Team 4th Dimension</a>
-					</div>
-					<div id="headnavbar" class="navbar-collapse collapse">
-						<ul class="nav navbar-nav">
-							<li class="home"><a class="page-link" href="#Home-Page">Home</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects & Fun <span class="caret"></span></a>
-									<ul class="dropdown-menu" role="menu">
-										<li class="dropdown-item"><a class="page-link" href="#LoLHelper-Page">LoL Helper</a></li>
-										<li class="dropdown-item"><a href="SpaceInvaders/index.html">Space Invaders</a></li>
-									</ul>
-							</li>
-							<li><a class="page-link" href="#Team-Page">Team</a></li>
-							<li><a class="page-link" href="#About-Page">About</a></li>
-						</ul>
-					</div>
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a id="Home" class="navbar-brand" href="#Home-Page"><img src="Images/Dog2.png" style="height:65px;margin-top:-10px;" /></a>
+				</div>
+				<div id="headnavbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="home"><a class="page-link" href="#Home-Page">Home</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects & Fun <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li class="dropdown-item"><a class="page-link" href="#LoLHelper-Page">LoL Helper</a></li>
+								<li class="dropdown-item"><a href="SpaceInvaders/index.html">Space Invaders</a></li>
+							</ul>
+						</li>
+						<li><a class="page-link" href="#Team-Page">Team</a></li>
+						<li><a class="page-link" href="#About-Page">About</a></li>
+					</ul>
 				</div>
 			</div>
+		</div>
 		
-			<!-- Content -->
-		<div id="bodywrapper">
-			<div id="Home-Page" class="content-bit Home-Page">
-				<div class="jumbotron">
-					<!--<h1 class="center">Team 4th Dimension</h1>-->
-					
-					  <div id="carousel-main" class="carousel slide" data-ride="carousel">
-					  <!-- Indicators -->
-					  <ol class="carousel-indicators">
+		<div id="Home-Page" class="content-bit Home-Page">
+			<div class="jumbotron">				
+				<div id="carousel-main" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators" style="visibility:hidden;">
 						<li id="carousel-button-1" class="carslide active" data-target="#carousel-main" data-slide-to="0"></li>
 						<li id="carousel-button-2" class="carslide" data-target="#carousel-main" data-slide-to="1"></li>
 						<li id="carousel-button-3" class="carslide" data-target="#carousel-main" data-slide-to="2"></li>
-					  </ol>
+					</ol>
 
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner">
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
 						<div class="item active">
-						  <img style="width: 100%;" src="Images/carousel1lg.jpg" alt="Design Meeting">
-						  <div class="carousel-caption">
-							Design
-						  </div>
+							<img style="width: 100%;" src="Images/carousel1lg.jpg" alt="Design Meeting">
+							<!--<div class="carousel-caption">Design</div>-->
 						</div>
 						<div class="item">
-						  <img style="width: 100%;" src="Images/carousel2lg.jpg" alt="Business Meeting">
-						  <div class="carousel-caption">
-							Business
-						  </div>
+							<img style="width: 100%;" src="Images/carousel2lg.jpg" alt="Business Meeting">
+							<!--<div class="carousel-caption">Business</div>-->
 						</div>
 						<div class="item">
-						  <img style="width: 100%;" src="Images/carousel3lg.jpg" alt="Concept">
-						  <div class="carousel-caption">
-							Vision
-						  </div>
+							<img style="width: 100%;" src="Images/carousel3lg.jpg" alt="Concept">
+							<!--<div class="carousel-caption">Vision</div>-->
 						</div>
-					  </div>
+					</div>
 
-					  <!-- Controls -->
-					  <a class="left carousel-control" href="#carousel-main" role="button" data-slide="prev">
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-main" role="button" data-slide="prev">
 						<span class="glyphicon glyphicon-chevron-left"></span>
-					  </a>
-					  <a class="right carousel-control" href="#carousel-main" role="button" data-slide="next">
+					</a>
+					<a class="right carousel-control" href="#carousel-main" role="button" data-slide="next">
 						<span class="glyphicon glyphicon-chevron-right"></span>
-					  </a>
-					</div>
-				</div>
-				<div class="row"><h4>Mission Statement:</h4><p style="padding-left: 10px; padding-right: 10px;">
-				Our goal in every aspect of business can be boiled down into one word:
-                            &mdash;Time. Time is money.  Time to get to work.  Time is on our side.
-                            Creation of your new web and mobile presence begins the moment you share your vision with us,
-                            but it doesn't end when we hand you the completed product.
-                            &mdash;  Here at 4th Dimension Design, we don't focus solely on your needs today.  We're here to help you plan for the future. <br> <br>
-                            Our mission is to provide web and app design that will be your intermediary with the wider world.<br><br>
-                            To provide web design and mobile optimization to businesses of any size
-				</p></div>
-				<div class="row" style="display:table-row;">
-					<div class = "col-md-4 tbox" id="main-text-one"><h4 class="page-header">Web Design</h4>Stylish, Efficient, and Functional.  These are the first words needed to create a web page that will be your public image for today and the years to come.</div>
-					<div class = "col-md-4 tbox" id="main-text-two"><h4 class="page-header">App Development</h4>The future is here.  There is a powerful computer in the hands of users across the world.  Will your product be there to meet them, or will you be relegated to the past?  </div>
-					<div class = "col-md-4 tbox" id="main-text-three"><h4 class="page-header">Consulting</h4>Maybe you just need a push in the right direction.  Time waits for no one so rather than learn the hard way and waste it, we'll find a way to help you bridge the gap.</div>
-				</div> <!--
-				<br> <br>
-				<div class = "row">
-					<div class = "col-sm-4"><h4 class="page-header">Example</h4> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
-					<div class = "col-sm-4"><h4 class="page-header">Example</h4> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
-					<div class = "col-sm-4"><h4 class="page-header">Example</h4> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</div>
-				</div>
-				-->
-				<div class="spacer"></div>
+					</a>
 				</div>
 			</div>
-			
-			<div id="LoLHelper-Page" class="content-bit LoLHelper-Page">
-				<div class="row row-odd row-first">
-					<h3 class="visible-xs">Team Builder</h3>
-					<div class="col-sm-4"><img src="Images/ssteambuilder.png" class="row-img img-tall"></div>
-					<div class="col-sm-8 left-text">
-						<h3 class="hidden-xs">Team Builder</h3>
-						<p>A LoL Helper exclusive, Team Builder helps you choose champions that work well as a team. Select a few champions that your team has chosen and our system will recommend which other champs will be a match. If you're more advanced, then you can also select a play style to receive a set of champions custom tailored to make it so.</p>
-					</div>
-				</div>
-				<div class="row row-even">
-					<h3 class="visible-xs">Player Statistics</h3>
-					<div class="col-sm-4 col-sm-push-8"><img src="Images/sslookup.png" class="row-img img-tall"></div>
-					<div class="col-sm-8 col-sm-pull-4 right-text">
-						<h3 class="hidden-xs">Player Statistics</h3>
-						<p>Every player wants to know how they measure up against their prey. Player statistics lets you look up a player by summoner name and check out their statistics, even stats for temporary game modes like One For All or U.R.F. are included. </p>
-					</div>
-				</div>
-				<div class="row row-odd">
-					<h3 class="visible-xs">Counters</h3>
-					<div class="col-sm-4"><img src="Images/sscounters.png" class="row-img img-tall"></div>
-					<div class="col-sm-8 left-text">
-						<h3 class="hidden-xs">Counters</h3>
-						<p>Maybe you see the champions on the other team and wet your pants. Fight that fear with the knowledge of who counters any champion. Or look up your own champion and see who you should steer clear of.</p>
-					</div>
-				</div>
-				<div class="row row-even">
-					<h3 class="visible-xs">Ultimate Bravery</h3>
-					<div class="col-sm-4 col-sm-push-8"><img src="Images/ssultimatebravery.png" class="row-img img-tall"></div>
-					<div class="col-sm-8 col-sm-pull-4 right-text">
-						<h3 class="hidden-xs">Ultimate Bravery</h3>
-						<p>Feeling brave? Click the ultimate random button and you'll be given a champion and build. Maybe you find a new favorite, maybe you get destroyed. The randomizer will pick any item for any champion, that's more than 6 Quadrillion choices. Are you feeling lucky?</p>
-					</div>
-				</div>
-				<div class="row row-odd">
-					<h3 class="visible-xs">Build Guides</h3>
-					<div class="col-sm-4"><img src="Images/ssbuildguides.png" class="row-img img-tall"></div>
-					<div class="col-sm-8 left-text">
-						<h3 class="hidden-xs">Build Guides</h3>
-						<p>If you're playing a new champion, picking the wrong item could ruin your day. Take guess work out of the equation by looking up a build guide. We've got them all.</p>
-					</div>
-				</div>
-				<div class="row row-even">
-					<h3 class="visible-xs">Jungle Timers</h3>
-					<div class="col-sm-4 col-sm-push-8"><img src="Images/sstimers.png" class="row-img img-tall"></div>
-					<div class="col-sm-8 col-sm-pull-4 right-text">
-						<h3 class="hidden-xs">Jungle Timers</h3>
-						<p>Did you kill those golems 4 minutes ago or have they respawned already? Better set an alarm. Using our jungle timers will give you a reliable alarm for jungle spawns, freeing you to decimate your opponents in the lane and be back in time for your golem friends. Surely, they'll be glad to see you.</p>
-					</div>
-				</div>
-				<div class="row row-odd">
-					<h3 class="visible-xs">General Info</h3>
-					<div class="col-sm-4"><img src="Images/sschampioninfo.png" class="row-img img-tall"></div>
-					<div class="col-sm-8 left-text">
-						<h3 class="hidden-xs">General Info</h3>
-						<p>General Info does what it says on the tin. We put detailed information on all the champions, items, and summoner spells in one place. Research anything your heart desires between matches. You want information? Have all the information.</p>
-					</div>
-				</div>
-				<div class="spacer"></div>
+			<!--
+			<div class="row" style="padding:0px 10px;">
+				<h4>Mission Statement:</h4>
+				<p>Our goal in every aspect of business can be boiled down into one word:&mdash;Time. Time is money. Time to get to work. Time is on our side. Creation of your new web and mobile presence begins the moment you share your vision with us, but it doesn't end when we hand you the completed product. &mdash; Here at 4th Dimension Design, we don't focus solely on your needs today. We're here to help you plan for the future.</p>
+				<p>Our mission is to provide web and app design that will be your intermediary with the wider world.</p>
+				<p>To provide web design and mobile optimization to businesses of any size</p>
 			</div>
-			
-			<div id="About-Page" class="content-bit About-Page">
-				<div class="row row-odd row-first">
-					<h3 class="visible-xs">Designed from the Top Down</h3>
-					<div class="col-sm-4">
-						<img src="Images/about1lg.jpg" alt="A New Whiteboard Pic" class="row-img" />
-					</div>
-					<div class="col-sm-8 left-text">
-						<h3 class="hidden-xs">Designed from the Top Down</h3>
-						<p>Our process begins with a deep brainstorming session. We meet with each person involved in the process&mdash;from your team and ours&mdash;to have their individual input included. This master list is then pared down, separating the chaff from the wheat, and expanded upon to create the abstract overview of tasks to complete the project.</p>
-					</div>
+			-->
+			<div class="row" style="display:table-row;">
+				<div class="col-md-4 tbox active" id="main-text-1">
+					<h4 class="page-header">Web Design</h4>
+					Stylish, Efficient, and Functional. These are the first words needed to create a web page that will be your public image for today and the years to come.
 				</div>
-				<div class="row row-even">
-					<h3 class="visible-xs">Built from the Ground Up</h3>
-					<div class="col-sm-4 col-sm-push-8">
-						<img src="Images/about2lg.jpg" alt="Team Computing Pic" class="row-img" />
-					</div>
-					<div class="col-sm-8 col-sm-pull-4 right-text">
-						<h3 class="hidden-xs">Built from the Ground Up</h3>
-						<br class="visible-xs" />
-						<br class="visible-xs" />
-						<p>After that introductory meeting, we break into teams to attack the generated task list head on. Each sub team is tasked with a single slice of the overarching task outline. By taking each part of the whole and treating it as a module we not only create a more functional end product, we complete it so fast that you'll wonder why you didn't come to us sooner.</p>
-					</div>
+				<div class="col-md-4 tbox" id="main-text-2">
+					<h4 class="page-header">App Development</h4>
+					The future is here. There is a powerful computer in the hands of users across the world. Will your product be there to meet them, or will you be relegated to the past?
 				</div>
-				<div class="row row-odd row-last">
-					<h3 class="visible-xs">Dynamic Convergence</h3>
-					<div class="col-sm-4">
-						<img src="Images/about3lg.jpg" alt="Meeting Room Pic" class="row-img" />
-					</div>
-					<div class="col-sm-8 left-text">
-						<h3 class="hidden-xs">Dynamic Convergence</h3>
-						<br class="visible-xs" />
-						<br class="visible-xs" />
-						<p>Keeping our sub teams informed at weekly meetings is a way for us to reconnect as a group to make certain that the product is made right the first time. Conferences with our clients connect them in the process, allowing you the chance to voice any and all concerns with our knowledgeable staff. A staff who knows how to speak both computer jargon and plain language fluently.</p>
-					</div>
+				<div class="col-md-4 tbox" id="main-text-3">
+					<h4 class="page-header">Consulting</h4>
+					Maybe you just need a push in the right direction. Time waits for no one so rather than learn the hard way and waste it, we'll find a way to help you bridge the gap.
 				</div>
-				<div class="spacer"></div>
 			</div>
+			<!-- Social Media 
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="fb-like" data-href="http://team4d.org/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+				</div>
+				<div class="col-sm-6">
+					<a class="twitter-timeline" href="https://twitter.com/OfficialTeam4D" data-widget-id="512791308746768384">Tweets by @OfficialTeam4D</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+			</div>
+			-->
 			
-			<div id="Team-Page" class="content-bit Team-Page">
-				<div class="row row-odd row-first">
-					<h1 style="text-align: center;">Meet the Team</h1>
+		</div>
+		
+		<div id="LoLHelper-Page" class="content-bit LoLHelper-Page">
+			<div class="row row-odd row-first">
+				<h1 style="text-align: center;">LoL Helper</h1>
+			</div>
+			<div class="row row-even">
+				<h3 class="visible-xs">Team Builder</h3>
+				<div class="col-sm-4" style="text-align:center;"><img src="Images/ssteambuilder.png" class="row-img img-tall"></div>
+				<div class="col-sm-8 left-text">
+					<h3 class="hidden-xs">Team Builder</h3>
+					<p>A LoL Helper exclusive, Team Builder helps you choose champions that work well as a team. Select a few champions that your team has chosen and our system will recommend which other champs will be a match. If you're more advanced, then you can also select a play style to receive a set of champions custom tailored to make it so.</p>
 				</div>
-				<div class="row row-even">
-					<h2 class="headname visible-xs">Alexa Varady</h2>
-					<h3 class="subhead visible-xs">President</h3>
-					<div class="col-sm-4">
-						<img src="Images/Alexa.jpg" alt="Alexa Varady" class="row-img" />
-					</div>
-					<div class="col-sm-8 left-text">
-						<h2 class="headname hidden-xs">Alexa Varady</h2>
-						<h3 class="subhead hidden-xs">President</h3>
-						<p>Alexa spends most of her time managing finances, accounts, paperwork, and employees. She is currently a junior at the University of Kansas where she is majoring in computer science and minoring in both business and mathematics. She is a National Merit Scholar, a Chancellors Club Scholar (one of 16 chosen each year at KU), on the Dean's Honor Roll, and a recipient of the Kenneth C. Deemer Engineering Award (highest GPA after completing 5 semesters at KU). She is fluent in English and Korean, and proficient in speaking Spanish.</p>
-					</div>
+			</div>
+			<div class="row row-odd">
+				<h3 class="visible-xs">Player Statistics</h3>
+				<div class="col-sm-4 col-sm-push-8" style="text-align:center;"><img src="Images/sslookup.png" class="row-img img-tall"></div>
+				<div class="col-sm-8 col-sm-pull-4 right-text">
+					<h3 class="hidden-xs">Player Statistics</h3>
+					<p>Every player wants to know how they measure up against their prey. Player statistics lets you look up a player by summoner name and check out their statistics, even stats for temporary game modes like One For All or U.R.F. are included. </p>
 				</div>
-				<div class="row row-odd">
-					<h2 class="headname visible-xs">Thomas Ford</h2>
-					<h3 class="subhead visible-xs">CEO</h3>
-					<div class="col-sm-4 col-sm-push-8">
-						<img src="Images/Thomas.jpg" alt="Thomas Ford" class="row-img" />
-					</div>
-					<div class="col-sm-8 col-sm-pull-4 right-text">
-						<h2 class="headname hidden-xs">Thomas Ford</h2>
-						<h3 class="subhead hidden-xs">CEO</h3>
-						<br class="visible-xs" />
-						<br class="visible-xs" />
-						<p>Thomas is the organizer of team meetings and manages each of the separate development teams. He is constantly checking with all members of the company to make sure they have what they need to get their job done. He also attends meeting at the local business development center and works close with marketing. He is always easily available by phone and email. Thomas is currently a senior at the University of Kansas studying computer science.</p>
-					</div>
+			</div>
+			<div class="row row-even">
+				<h3 class="visible-xs">Counters</h3>
+				<div class="col-sm-4" style="text-align:center;"><img src="Images/sscounters.png" class="row-img img-tall"></div>
+				<div class="col-sm-8 left-text">
+					<h3 class="hidden-xs">Counters</h3>
+					<p>Maybe you see the champions on the other team and wet your pants. Fight that fear with the knowledge of who counters any champion. Or look up your own champion and see who you should steer clear of.</p>
 				</div>
-				<div class="row row-even">
-					<h2 class="headname visible-xs">Sean Stout</h2>
-					<h3 class="subhead visible-xs">Lead Web Developer & Designer</h3>
-					<div class="col-sm-4">
-						<img src="Images/Sean.jpg" alt="Sean Stout" class="row-img" />
-					</div>
-					<div class="col-sm-8 left-text">
-						<h2 class="headname hidden-xs">Sean Stout</h2>
-						<h3 class="subhead hidden-xs">Lead Web Developer & Designer</h3>
-						<p>Sean is in charge of web development and design, where he spends his time managing the team as well as designing and coding himself. Sean is a senior at the University of Kansas where he is majoring in computer science. He used to be an aerospace engineering student, but upon taking his first programming class he declared that it was "way better than any aerospace class" and promptly changed majors. Sean is capable of providing French translation services by request.</p>
-					</div>
+			</div>
+			<div class="row row-odd">
+				<h3 class="visible-xs">Ultimate Bravery</h3>
+				<div class="col-sm-4 col-sm-push-8" style="text-align:center;"><img src="Images/ssultimatebravery.png" class="row-img img-tall"></div>
+				<div class="col-sm-8 col-sm-pull-4 right-text">
+					<h3 class="hidden-xs">Ultimate Bravery</h3>
+					<p>Feeling brave? Click the ultimate random button and you'll be given a champion and build. Maybe you find a new favorite, maybe you get destroyed. The randomizer will pick any item for any champion, that's more than 6 Quadrillion choices. Are you feeling lucky?</p>
 				</div>
-				<div class="row row-odd">
-					<h2 class="headname visible-xs">Jordyn Cox</h2>
-					<h3 class="subhead visible-xs">Director of Social Media</h3>
-					<div class="col-sm-4 col-sm-push-8">
-						<img src="Images/Jordyn.jpg" alt="Jordyn Cox" class="row-img" />
-					</div>
-					<div class="col-sm-8 col-sm-pull-4 right-text">
-						<h2 class="headname hidden-xs">Jordyn Cox</h2>
-						<h3 class="subhead hidden-xs">Director of Social Media</h3>
-						<br class="visible-xs" />
-						<br class="visible-xs" />
-						<p>Jordyn is in charge of the management, promotion, and content addition to Team 4th Dimension's online presence. Additionally, she serves as spokesperson at public events, media, and client negotiations. Jordyn is a student at the University of Kansas where she is a senior in Anthropology and an Italian student. Jordyn is capable of providing Italian translation services by request.</p>
-					</div>
+			</div>
+			<div class="row row-even">
+				<h3 class="visible-xs">Build Guides</h3>
+				<div class="col-sm-4" style="text-align:center;"><img src="Images/ssbuildguides.png" class="row-img img-tall"></div>
+				<div class="col-sm-8 left-text">
+					<h3 class="hidden-xs">Build Guides</h3>
+					<p>If you're playing a new champion, picking the wrong item could ruin your day. Take guess work out of the equation by looking up a build guide. We've got them all.</p>
 				</div>
-				<div class="row row-even">
-					<h2 class="headname visible-xs">Su Yan</h2>
-					<h3 class="subhead visible-xs">Mobile App Developer</h3>
-					<div class="col-sm-4">
-						<img src="Images/Su.jpg" alt="Su Yan" class="row-img" />
-					</div>
-					<div class="col-sm-8 left-text">
-					<h2 class="headname hidden-xs">Su Yan</h2>
+			</div>
+			<div class="row row-odd">
+				<h3 class="visible-xs">Jungle Timers</h3>
+				<div class="col-sm-4 col-sm-push-8" style="text-align:center;"><img src="Images/sstimers.png" class="row-img img-tall"></div>
+				<div class="col-sm-8 col-sm-pull-4 right-text">
+					<h3 class="hidden-xs">Jungle Timers</h3>
+					<p>Did you kill those golems 4 minutes ago or have they respawned already? Better set an alarm. Using our jungle timers will give you a reliable alarm for jungle spawns, freeing you to decimate your opponents in the lane and be back in time for your golem friends. Surely, they'll be glad to see you.</p>
+				</div>
+			</div>
+			<div class="row row-even">
+				<h3 class="visible-xs">General Info</h3>
+				<div class="col-sm-4" style="text-align:center;"><img src="Images/sschampioninfo.png" class="row-img img-tall"></div>
+				<div class="col-sm-8 left-text">
+					<h3 class="hidden-xs">General Info</h3>
+					<p>General Info does what it says on the tin. We put detailed information on all the champions, items, and summoner spells in one place. Research anything your heart desires between matches. You want information? Have all the information.</p>
+				</div>
+			</div>
+		</div>
+		
+		<div id="About-Page" class="content-bit About-Page">
+			<div class="row row-odd row-first">
+				<h3 class="visible-xs">Designed from the Top Down</h3>
+				<div class="col-sm-4" style="text-align:center;">
+					<img src="Images/about1lg.jpg" alt="A New Whiteboard Pic" class="row-img" />
+				</div>
+				<div class="col-sm-8 left-text">
+					<h3 class="hidden-xs">Designed from the Top Down</h3>
+					<p>Our process begins with a deep brainstorming session. We meet with each person involved in the process&mdash;from your team and ours&mdash;to have their individual input included. This master list is then pared down, separating the chaff from the wheat, and expanded upon to create the abstract overview of tasks to complete the project.</p>
+				</div>
+			</div>
+			<div class="row row-even">
+				<h3 class="visible-xs">Built from the Ground Up</h3>
+				<div class="col-sm-4 col-sm-push-8" style="text-align:center;">
+					<img src="Images/about2lg.jpg" alt="Team Computing Pic" class="row-img" />
+				</div>
+				<div class="col-sm-8 col-sm-pull-4 right-text">
+					<h3 class="hidden-xs">Built from the Ground Up</h3>
+					<br class="visible-xs" />
+					<br class="visible-xs" />
+					<p>After that introductory meeting, we break into teams to attack the generated task list head on. Each sub team is tasked with a single slice of the overarching task outline. By taking each part of the whole and treating it as a module we not only create a more functional end product, we complete it so fast that you'll wonder why you didn't come to us sooner.</p>
+				</div>
+			</div>
+			<div class="row row-odd row-last">
+				<h3 class="visible-xs">Dynamic Convergence</h3>
+				<div class="col-sm-4" style="text-align:center;">
+					<img src="Images/about3lg.jpg" alt="Meeting Room Pic" class="row-img" />
+				</div>
+				<div class="col-sm-8 left-text">
+					<h3 class="hidden-xs">Dynamic Convergence</h3>
+					<br class="visible-xs" />
+					<br class="visible-xs" />
+					<p>Keeping our sub teams informed at weekly meetings is a way for us to reconnect as a group to make certain that the product is made right the first time. Conferences with our clients connect them in the process, allowing you the chance to voice any and all concerns with our knowledgeable staff. A staff who knows how to speak both computer jargon and plain language fluently.</p>
+				</div>
+			</div>
+		</div>
+		
+		<div id="Team-Page" class="content-bit Team-Page">
+			<div class="row row-odd row-first">
+				<h1 style="text-align: center;">Meet the Team</h1>
+			</div>
+			<div class="row row-even">
+				<h2 class="headname visible-xs">Alexa Varady</h2>
+				<h3 class="subhead visible-xs">President</h3>
+				<div class="col-sm-4" style="text-align:center;">
+					<img src="Images/Alexa.jpg" alt="Alexa Varady" class="row-img" />
+				</div>
+				<div class="col-sm-8 left-text">
+					<h2 class="headname hidden-xs">Alexa Varady</h2>
+					<h3 class="subhead hidden-xs">President</h3>
+					<p>Alexa spends most of her time managing finances, accounts, paperwork, and employees. She is currently a junior at the University of Kansas where she is majoring in computer science and minoring in both business and mathematics. She is a National Merit Scholar, a Chancellors Club Scholar (one of 16 chosen each year at KU), on the Dean's Honor Roll, and a recipient of the Kenneth C. Deemer Engineering Award (highest GPA after completing 5 semesters at KU). She is fluent in English and Korean, and proficient in speaking Spanish.</p>
+				</div>
+			</div>
+			<div class="row row-odd">
+				<h2 class="headname visible-xs">Thomas Ford</h2>
+				<h3 class="subhead visible-xs">CEO</h3>
+				<div class="col-sm-4 col-sm-push-8" style="text-align:center;">
+					<img src="Images/Thomas.jpg" alt="Thomas Ford" class="row-img" />
+				</div>
+				<div class="col-sm-8 col-sm-pull-4 right-text">
+					<h2 class="headname hidden-xs">Thomas Ford</h2>
+					<h3 class="subhead hidden-xs">CEO</h3>
+					<br class="visible-xs" />
+					<br class="visible-xs" />
+					<p>Thomas is the organizer of team meetings and manages each of the separate development teams. He is constantly checking with all members of the company to make sure they have what they need to get their job done. He also attends meeting at the local business development center and works close with marketing. He is always easily available by phone and email. Thomas is currently a senior at the University of Kansas studying computer science.</p>
+				</div>
+			</div>
+			<div class="row row-even">
+				<h2 class="headname visible-xs">Sean Stout</h2>
+				<h3 class="subhead visible-xs">Lead Web Developer & Designer</h3>
+				<div class="col-sm-4" style="text-align:center;">
+					<img src="Images/Sean.jpg" alt="Sean Stout" class="row-img" />
+				</div>
+				<div class="col-sm-8 left-text">
+					<h2 class="headname hidden-xs">Sean Stout</h2>
+					<h3 class="subhead hidden-xs">Lead Web Developer & Designer</h3>
+					<p>Sean is in charge of web development and design, where he spends his time managing the team as well as designing and coding himself. Sean is a senior at the University of Kansas where he is majoring in computer science. He used to be an aerospace engineering student, but upon taking his first programming class he declared that it was "way better than any aerospace class" and promptly changed majors. Sean is capable of providing French translation services by request.</p>
+				</div>
+			</div>
+			<div class="row row-odd">
+				<h2 class="headname visible-xs">Jordyn Cox</h2>
+				<h3 class="subhead visible-xs">Director of Social Media</h3>
+				<div class="col-sm-4 col-sm-push-8" style="text-align:center;">
+					<img src="Images/Jordyn.jpg" alt="Jordyn Cox" class="row-img" />
+				</div>
+				<div class="col-sm-8 col-sm-pull-4 right-text">
+					<h2 class="headname hidden-xs">Jordyn Cox</h2>
+					<h3 class="subhead hidden-xs">Director of Social Media</h3>
+					<br class="visible-xs" />
+					<br class="visible-xs" />
+					<p>Jordyn is in charge of the management, promotion, and content addition to Team 4th Dimension's online presence. Additionally, she serves as spokesperson at public events, media, and client negotiations. Jordyn is a student at the University of Kansas where she is a senior in Anthropology and an Italian student. Jordyn is capable of providing Italian translation services by request.</p>
+				</div>
+			</div>
+			<div class="row row-even">
+				<h2 class="headname visible-xs">Su Yan</h2>
+				<h3 class="subhead visible-xs">Mobile App Developer</h3>
+				<div class="col-sm-4" style="text-align:center;">
+					<img src="Images/Su.jpg" alt="Su Yan" class="row-img" />
+				</div>
+				<div class="col-sm-8 left-text">
+				<h2 class="headname hidden-xs">Su Yan</h2>
+				<h3 class="subhead hidden-xs">Mobile App Developer</h3>
+					<br class="visible-xs" />
+					<br class="visible-xs" />
+					<p>Su is an extremely talented mobile developer who works along with a team to bring the highest quality apps to our customers. He is dedicated to continue to bring more and more new content to our apps, as well as provide long term maintenance. Su is a student at the University of Kansas where he is a junior in computer science. He has held an interest in programming ever since he was 11 years old, when he first learned the language Logo.</p>
+				</div>
+			</div>
+			<div class="row row-odd">
+				<h2 class="headname visible-xs">Austin Hoffmann</h2>
+				<h3 class="subhead visible-xs">Mobile App Developer</h3>
+				<div class="col-sm-4 col-sm-push-8" style="text-align:center;">
+					<img src="Images/Austin.jpg" alt="Austin Hoffmann" class="row-img" />
+				</div>
+				<div class="col-sm-8 col-sm-pull-4 right-text">
+					<h2 class="headname hidden-xs">Austin Hoffmann</h2>
 					<h3 class="subhead hidden-xs">Mobile App Developer</h3>
-						<br class="visible-xs" />
-						<br class="visible-xs" />
-						<p>Su is an extremely talented mobile developer who works along with a team to bring the highest quality apps to our customers. He is dedicated to continue to bring more and more new content to our apps, as well as provide long term maintenance. Su is a student at the University of Kansas where he is a junior in computer science. He has held an interest in programming ever since he was 11 years old, when he first learned the language Logo.</p>
-					</div>
+					<br class="visible-xs" />
+					<br class="visible-xs" />
+					<p>Austin works primarily as an Android programmer for Team 4th Dimension. Starting as programming lead for LoLHelper, he continues to support it and will continue as support for future applications. Austin is currently a senior at the University of Kansas, studying computer science and Germanic language.</p>
 				</div>
-				<div class="row row-odd">
-					<h2 class="headname visible-xs">Austin Hoffmann</h2>
-					<h3 class="subhead visible-xs">Mobile App Developer</h3>
-					<div class="col-sm-4 col-sm-push-8">
-						<img src="Images/Austin.jpg" alt="Austin Hoffmann" class="row-img" />
-					</div>
-					<div class="col-sm-8 col-sm-pull-4 right-text">
-						<h2 class="headname hidden-xs">Austin Hoffmann</h2>
-						<h3 class="subhead hidden-xs">Mobile App Developer</h3>
-						<br class="visible-xs" />
-						<br class="visible-xs" />
-						<p>Austin works primarily as an Android programmer for Team 4th Dimension. Starting as programming lead for LoLHelper, he continues to support it and will continue as support for future applications. Austin is currently a senior at the University of Kansas, studying computer science and Germanic language.</p>
-					</div>
-				</div>
-				<div class="row row-even row-last">
-					<h2 class="headname visible-xs">Murl Westheffer</h2>
-					<h3 class="subhead visible-xs">Graphic Design Lead</h3>
-					<div class="col-sm-4">
-						<img src="Images/Murl.jpg" alt="Murl Westheffer" class="row-img" />
-					</div>
-					<div class="col-sm-8 left-text">
-					<h2 class="headname hidden-xs">Murl Westheffer</h2>
-					<h3 class="subhead hidden-xs">Graphic Design Lead</h3>
-						<br class="visible-xs" />
-						<br class="visible-xs" />
-						<p>Murl is in charge of graphic design, where he primarily spends his time creating and approving layouts, color schemes, and images for all projects, though Murl does spend time helping in all areas of the company. Murl is currently a junior at the University of Kansas studying computer science, though he has studied a broad array of subjects. "The more you know about a wider array of subject, then the better you can interface with other people on your team or in the public."</p>
-					</div>
-				</div>
-				<div class="spacer"></div>
 			</div>
-			
-		    <div id="footer">
-				&copy; Team 4th Dimension 2014 | <a href="mailto:seanstout@team4d.org">Email</a> | Phone | Mail
-				<br>
-				This website is under construction
-				<br>
-				Web design by Team 4th Dimension
-				<br>
-															  <!--Added in some cleaned up images without white background for the footer -->
-				<a target="blank" href="http://www.facebook.com/TeamFourthDimension"><img src="Images/fb_logo.png"></a>&nbsp;<a target="blank" href="http://twitter.com/OfficialTeam4D"><img src="Images/twitter_logo.png"></a>
-					<br><br>
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-					<input type="hidden" name="cmd" value="_s-xclick">
-					<input type="hidden" name="hosted_button_id" value="SDVF2B5Q4ALFG">
-					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-				</form>
+			<div class="row row-even row-last">
+				<h2 class="headname visible-xs">Murl Westheffer</h2>
+				<h3 class="subhead visible-xs">Graphic Design Lead</h3>
+				<div class="col-sm-4" style="text-align:center;">
+					<img src="Images/Murl.jpg" alt="Murl Westheffer" class="row-img" />
+				</div>
+				<div class="col-sm-8 left-text">
+				<h2 class="headname hidden-xs">Murl Westheffer</h2>
+				<h3 class="subhead hidden-xs">Graphic Design Lead</h3>
+					<br class="visible-xs" />
+					<br class="visible-xs" />
+					<p>Murl is in charge of graphic design, where he primarily spends his time creating and approving layouts, color schemes, and images for all projects, though Murl does spend time helping in all areas of the company. Murl is currently a junior at the University of Kansas studying computer science, though he has studied a broad array of subjects. "The more you know about a wider array of subject, then the better you can interface with other people on your team or in the public."</p>
+				</div>
 			</div>
+		</div>
+		
+		<div id="footer">
+			&copy; Team 4th Dimension 2014 | <a href="mailto:seanstout@team4d.org">Email</a> | Phone | Mail<br>
+			This website is under construction<br>
+			Web design by Team 4th Dimension<br>
+			<!--Added in some cleaned up images without white background for the footer -->
+			<a target="blank" href="http://www.facebook.com/TeamFourthDimension"><img src="Images/fb_logo.png"></a>&nbsp;<a target="blank" href="http://twitter.com/OfficialTeam4D"><img src="Images/twitter_logo.png"></a><br>
+			<br>
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="SDVF2B5Q4ALFG">
+				<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+		</div>
+	</div>
 	</body>
 </html>
