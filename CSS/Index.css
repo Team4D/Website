@@ -1,5 +1,5 @@
 html, body {
-	background-color: #E6E6E6;
+	background-color: #003D56;
 	height: 100%;
 	color: #FFF;
 }
@@ -16,9 +16,9 @@ html, body {
 #footer {
 	text-align: center;
 	padding-top: 10px;
-	color: #f8f8f8;
-	background-color: #064660;
-	margin-top: 5px;
+	color: #000;
+	background-color: #FFF;
+	margin-top: 30px;
 }
 
 #pagetop {
@@ -32,6 +32,8 @@ html, body {
 	min-width: 1199px;
 	width: 75%;
 	margin: auto;
+	background-color: #FFF;
+	box-shadow: 0px 0px 10px #333;
 }
 
 .spacer {
@@ -70,29 +72,28 @@ div {
 	background-color: #1e8fbe;
 	text-align: center;
 	padding: 0px;
-	margin-bottom: 5px;
+	margin-bottom: 20px;
 }
 
 .tbox {
 	margin-top: 15px;
 	margin-top: 0px;
-	padding-top: 20px;
-	padding-bottom: 35px;
 	text-align: center;
-	background-color: #1E8FBE;
+	background-color: #FFF;
+	color: #999;
 	cursor: pointer;
 }
 .tbox h4 {
-	margin-top: 0;
-	padding-top: 10px;
+	color: #999;
+	margin: 0;
+	border-bottom: 0px;
 }
 .tbox.active h4 {
-	color: #00431D;
-	border-bottom: 1px solid #00431D;
+	color: #008AB0;
 }
 .tbox.active {
-	background-color: #82CD73;
-	color: #00431D;
+	background-color: #FFF;
+	color: #009F18;
 }
 
 h5, h4 {
@@ -101,8 +102,8 @@ h5, h4 {
 }
 
 #main-text-2 {
-	border-left: 5px solid #E6E6E6;
-	border-right: 5px solid #E6E6E6;
+	border-left: 1px solid #808080;
+	border-right: 1px solid #808080;
 }
 
 .row {
@@ -126,7 +127,6 @@ img {
 }
 
 .page-header {
-	border-bottom: 1px solid #FFF;
 	color: #FFF;
 }
 
@@ -139,9 +139,11 @@ img {
 }
 
 .navbar {
-	height: 75px;
-	background-color: #064660;
-	margin-bottom: 5px;
+	height: 100px;
+	background-color: #FFF;
+	margin-bottom: 0px;
+	box-shadow: 0px 0px 5px #666;
+	border: 0px;
 }
 
 .nav {
@@ -155,14 +157,14 @@ img {
 	padding: 10px 15px;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-	background-color: #A2EADB;
-	color: #555555;
+	background-color: #44ACE1;
+	color: #FFF;
 }
 .navbar-default .navbar-nav > li > a {
-	color: #82CD73;
+	color: #009F18;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-	color: #FFF;
+	color: #000;
 }
 
 .carousel {
