@@ -42,7 +42,6 @@ $(document).ready(function(){
 		var slideNum = Number($("#carousel-main .active:first").attr("data-slide-to"))+1;
 		$(".tbox").removeClass("active");
 		$("#main-text-"+slideNum).addClass("active");
-		$("#carousel-button-"+x).click();
 	})
 	
 	var openPage = false;
