@@ -78,25 +78,55 @@ div {
 }
 
 .tbox {
-	margin-top: 15px;
+margin-right:5px
+	
 	margin-top: 0px;
 	padding-top: 20px;
 	padding-bottom: 35px;
 	text-align: center;
 	background-color: #1E8FBE;
+	background-color: #FFF;
+	color: #999;
 	cursor: pointer;
+  
 }
 .tbox h4 {
 	margin-top: 0;
 	padding-top: 10px;
+	color: #999;
+	margin: 0;
+	border-bottom: 0px;
 }
 .tbox.active h4 {
 	color: #00431D;
 	border-bottom: 1px solid #00431D;
+	color: #008AB0;
 }
 .tbox.active {
-	background-color: #41C76A;
+	background-color: #82CD73;
 	color: #00431D;
+	background-color: #FFF;
+	color: #009F18;
+}
+
+
+.about-head {
+	background-color:  #82CD73;
+	color:#333;
+          margin-bottom:25px;
+}
+
+#about-text {
+  border: 2px solid #808080;
+  font-size: 15px;
+}
+
+.about-header {
+	background-color: rgba(166, 208, 231, 1);
+	color: #333;
+	padding: 10px 0px;
+	margin-bottom: 5px;
+  border: 2px solid #808080;
 }
 
 h5, h4 {
@@ -104,9 +134,17 @@ h5, h4 {
 	font-size: 22px;
 }
 
+#main-text-1 {
+  border: 2px solid #808080;
+  
+}
+
+#main-text-3 {
+	border: 2px solid #808080;
+}
+
 #main-text-2 {
-	border-left: 5px solid #E6E6E6;
-	border-right: 5px solid #E6E6E6;
+  border: 2px solid #808080;
 }
 
 .row {
