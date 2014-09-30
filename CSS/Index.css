@@ -25,6 +25,10 @@ html, body {
 	margin-top: 5px;
 }
 
+.navbar-default .navbar-toggle {
+	border-color: #e6e6e6;
+}
+
 #pagetop {
 	height: 150px;
 	background-color: #1e8fbe;

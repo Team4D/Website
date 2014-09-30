@@ -37,6 +37,29 @@ $(document).ready(function(){
 		$("#carousel-button-"+slideID).click();
 	});
 	
+	var xsexpanded = false;
+	
+	$('#xsbutton').click(function() {
+		if ($('#headnavbar').hasClass('in')) {
+			$('#xsbutton').css("border-color", "#e6e6e6");
+			$('#xsbutton').css("background-color", "#064660");
+			xsexpanded = false;
+		}
+		else {
+			$('#xsbutton').css("border-color", "#41C76A");
+			$('#xsbutton').css("background-color", "#41C76A");
+			xsexpanded = true;
+		}
+	});
+	
+	$('#xsbutton').hover(function() { 
+		$('#xsbutton').css("border-color", "#41C76A"); 
+		$('#xsbutton').css("background-color", "#41C76A");
+		}, function() {
+			if (xsexpanded === false) {
+			$('#xsbutton').css("border-color", "#e6e6e6");
+			$('#xsbutton').css("background-color", "#064660");}});
+	
 	
 	$('#carousel-main').on('slid.bs.carousel',function(){
 		var slideNum = Number($("#carousel-main .active:first").attr("data-slide-to"))+1;
