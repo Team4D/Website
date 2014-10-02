@@ -1,29 +1,76 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
-		<title>Team 4th Dimension</title>
-		<script type='text/javascript' src='http://code.jquery.com/jquery-1.11.1.min.js'></script>
-        <script type='text/javascript' src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-        <script type='text/javascript' src='Scripts/Index.js'></script>
-		<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'/>
-		<link rel='stylesheet' href='CSS/Index.css'/>
-		<!-- <link rel='stylesheet' href='CSS/whitedivs.css'/> -->
+		<title>4th Dimension Software Solutions</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="Scripts/Index.js"></script>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="CSS/Index.css" />
 	</head>
 	
 	<body>
-	<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=481129018566168&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+	<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '385383954948164',
+			xfbml      : true,
+			version    : 'v2.1'
+		});
+	};
+	
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
+	
+	<!-- SVG SOURCE -->
+	<svg height="0" width="0" style="position:absolute;margin-left:-100%;">
+	<path id="twitter-icon" d="M28.348,5.157c-13.6,0-24.625,11.027-24.625,24.625c0,13.6,11.025,24.623,24.625,24.623c13.6,0,24.623-11.023,24.623-24.623
+	C52.971,16.184,41.947,5.157,28.348,5.157z M40.752,24.817c0.013,0.266,0.018,0.533,0.018,0.803c0,8.201-6.242,17.656-17.656,17.656
+	c-3.504,0-6.767-1.027-9.513-2.787c0.486,0.057,0.979,0.086,1.48,0.086c2.908,0,5.584-0.992,7.707-2.656
+	c-2.715-0.051-5.006-1.846-5.796-4.311c0.378,0.074,0.767,0.111,1.167,0.111c0.566,0,1.114-0.074,1.635-0.217
+	c-2.84-0.57-4.979-3.08-4.979-6.084c0-0.027,0-0.053,0.001-0.08c0.836,0.465,1.793,0.744,2.811,0.777
+	c-1.666-1.115-2.761-3.012-2.761-5.166c0-1.137,0.306-2.204,0.84-3.12c3.061,3.754,7.634,6.225,12.792,6.483
+	c-0.106-0.453-0.161-0.928-0.161-1.414c0-3.426,2.778-6.205,6.206-6.205c1.785,0,3.397,0.754,4.529,1.959
+	c1.414-0.277,2.742-0.795,3.941-1.506c-0.465,1.45-1.448,2.666-2.73,3.433c1.257-0.15,2.453-0.484,3.565-0.977
+	C43.018,22.849,41.965,23.942,40.752,24.817z" />
+	<path id="facebook-icon" d="M28.347,5.157c-13.6,0-24.625,11.027-24.625,24.625c0,13.6,11.025,24.623,24.625,24.623c13.6,0,24.625-11.023,24.625-24.623
+	C52.972,16.184,41.946,5.157,28.347,5.157z M34.864,29.679h-4.264c0,6.814,0,15.207,0,15.207h-6.32c0,0,0-8.307,0-15.207h-3.006
+	V24.31h3.006v-3.479c0-2.49,1.182-6.377,6.379-6.377l4.68,0.018v5.215c0,0-2.846,0-3.398,0c-0.555,0-1.34,0.277-1.34,1.461v3.163
+	h4.818L34.864,29.679z" />
+	<g id="paypal-icon">
+		<path d="M39.017,24.388c-1.105,5.01-5.221,8.25-10.486,8.25h-2.719l-1.137,5.164l-0.346,1.574h-1.611h-2.023l-0.573,2.543h6.059
+		l1.482-6.738h4.328c4.141,0,7.604-2.471,8.529-6.674c0.539-2.443-0.127-4.199-1.311-5.332
+		C39.173,23.562,39.11,23.966,39.017,24.388z" />
+		<path d="M22.718,37.37l1.484-6.736h4.328c0.051,0,0.102-0.004,0.152-0.006c2.461-0.037,4.67-0.951,6.236-2.586
+		c1.027-1.068,1.777-2.443,2.141-4.086c0.158-0.721,0.211-1.381,0.178-1.984c-0.047-0.866-0.273-1.612-0.631-2.243
+		c-1.029-1.832-3.137-2.693-5.047-2.693H21.235L16.66,37.37h2.431h2.055H22.718z M26.271,21.583l0.096-0.407h2.967
+		c0.512,0,0.963,0.148,1.318,0.407c0.676,0.486,1.006,1.363,0.721,2.373c-0.162,0.676-0.547,1.289-1.055,1.768
+		c-0.184,0.172-0.385,0.324-0.598,0.459c-0.551,0.348-1.18,0.559-1.811,0.559h-2.842L26.271,21.583z"/>
+		<path d="M29.425,23.489l0.008-0.035l0.01-0.039c0.033-0.117,0.031-0.188,0.027-0.217c-0.021-0.008-0.064-0.018-0.137-0.018h-1.377
+		l-0.363,1.557h0.316C28.534,24.737,29.271,24.13,29.425,23.489z" />
+		<path d="M28.347,5.157c-13.6,0-24.625,11.023-24.625,24.624c0,13.6,11.024,24.625,24.625,24.625
+		c13.6,0,24.625-11.025,24.625-24.625C52.972,16.18,41.946,5.157,28.347,5.157z M42.478,28.938
+		c-1.104,5.01-5.221,8.246-10.486,8.246h-2.717l-1.137,5.164l-0.348,1.574h-1.609h-6.059h-2.505l0.55-2.443l0.474-2.104h-1.98
+		h-2.504l0.55-2.443l4.575-20.338l0.352-1.564h1.603H31.56c2.459,0,4.77,1.049,6.182,2.805c0.521,0.65,1.055,1.566,1.326,2.773
+		c0.828,0.457,1.557,1.057,2.133,1.774C42.177,23.597,43.188,25.718,42.478,28.938z" />
+	</g>
+	</svg>
+	<!-- SVG SOURCE ends-->
+	
 	<!-- Content -->
-	<div id="bodywrapper">
+	<div id="bodywrapper">        
 		<!-- Navbar -->
 		<div class="navbar navbar-default navbar-static-top" role="navigation">
+			<div id="social-media">
+				<a id="Home" href="#Home-Page"><img src="Images/Logo.png" style="height:100px;border:0;" /></a>
+				<a href="http://www.facebook.com/TeamFourthDimension" target="_blank" title="Facebook"><svg class="icon" viewBox="0 0 56.693 56.693"><use xlink:href="#facebook-icon"></use></svg></a><a href="http://twitter.com/OfficialTeam4D" target="_blank" title="Twitter"><svg class="icon" viewBox="0 0 56.693 56.693"><use xlink:href="#twitter-icon"></use></svg></a><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SDVF2B5Q4ALFG" target="_blank" title="Support Us"><svg class="icon" viewBox="0 0 56.693 56.693"><use xlink:href="#paypal-icon"></use></svg></a>
+			</div>
 			<div class="navbarcontainer" style="background-color:transparent;">
 				<div class="navbar-header">
 					<button id="xsbutton" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -32,13 +79,12 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a id="Home" class="navbar-brand" href="#Home-Page"><img src="Images/Dog2.png" style="height:65px;margin-top:-10px;" /></a>
 				</div>
 				<div id="headnavbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
 						<li class="home"><a class="page-link" href="#Home-Page">Home</a></li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects & Fun <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects &amp; Fun <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li class="dropdown-item"><a class="page-link" href="#LoLHelper-Page">LoL Helper</a></li>
 								<li class="dropdown-item"><a href="SpaceInvaders/index.html">Space Invaders</a></li>
@@ -52,6 +98,9 @@
 		</div>
 		
 		<div id="Home-Page" class="content-bit Home-Page">
+        	
+            <div style="padding-bottom:50px;">
+            
 			<div class="jumbotron">				
 				<div id="carousel-main" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
@@ -108,17 +157,20 @@
 					Maybe you just need a push in the right direction. Time waits for no one so rather than learn the hard way and waste it, we'll find a way to help you bridge the gap.
 				</div>
 			</div>
-			<!-- Social Media 
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="fb-like" data-href="http://team4d.org/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            
+            </div>
+            
+			<!-- Social Media -->
+			<div class="row" id="social-feeds">
+				<div class="col-sm-6" style="text-align:center;">
+					<div class="fb-like-box" data-href="https://www.facebook.com/TeamFourthDimension" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"><img src="Images/fb_feed.PNG" style="height:450px;" /></div>
 				</div>
-				<div class="col-sm-6">
-					<a class="twitter-timeline" href="https://twitter.com/OfficialTeam4D" data-widget-id="512791308746768384">Tweets by @OfficialTeam4D</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				<div class="col-sm-6" style="text-align:center;">
+					<a class="twitter-timeline"  href="https://twitter.com/OfficialTeam4D" data-widget-id="517177959354884098">Tweets by @OfficialTeam4D</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				</div>
 			</div>
-			-->
+			
 			
 		</div>
 		
@@ -355,7 +407,7 @@
 			<!--Added in some cleaned up images without white background for the footer -->
 			<a target="blank" href="http://www.facebook.com/TeamFourthDimension"><img src="Images/fb_logo.png"></a>&nbsp;<a target="blank" href="http://twitter.com/OfficialTeam4D"><img src="Images/twitter_logo.png"></a><br>
 			<br>
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+			<form action="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SDVF2B5Q4ALFG" method="post" target="_top">
 				<input type="hidden" name="cmd" value="_s-xclick">
 				<input type="hidden" name="hosted_button_id" value="SDVF2B5Q4ALFG">
 				<input type="image" src="Images/support-us.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
