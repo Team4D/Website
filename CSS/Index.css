@@ -102,6 +102,12 @@ a:link,a:active,a:visited {
 .navbar-default .navbar-nav > li > a {
 	color: #003D56;
 }
+
+.navbar-fixed-top {
+	min-width: 1199px;
+	width: 75%;
+	margin: auto;
+}
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
 	color: #003D56;
 }
@@ -304,6 +310,12 @@ a:link,a:active,a:visited {
 }
 @media (max-width: 1199px) {
 	#bodywrapper {
+		min-width: 100%;
+		width: 100%;
+	}
+	
+	.navbar-fixed-top {
+		margin-top: -10px;
 		min-width: 100%;
 		width: 100%;
 	}
