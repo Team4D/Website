@@ -1,27 +1,21 @@
 $(document).ready(function(){
 	$('.carousel').carousel();
 	
-	var windowposition = $(window).scrollTop();
-	
 $(window).scroll(function (event) {
 	var scroll = $(window).scrollTop();
-	if ((scroll > 120)&&(windowposition < 120)) { // If we scrolled down far enough
+	if ((scroll > 120)&&($('#navigator').hasClass('navbar-static-top'))) { // If we scrolled down far enough
 		$('#navigator').removeClass('navbar-static-top');
 		$('#navigator').addClass('navbar-fixed-top');
-		$('#social-media').toggle();
-		$('#navigator').css('height', '50px');
-		$('#navigator').css('margin-top', '-10px'); // For some reason margin-top doesn't seem to work with just css
+		$('#navigator').css('margin-top', '-120px'); // For some reason margin-top doesn't seem to work with just css
 		$('#bodywrapper').css('padding-top', '150px');
 	}
-	else  if ((scroll < 120)&&(windowposition >= 120)) { // If we scrolled back up
+	else  if ((scroll < 120)&&($('#navigator').hasClass('navbar-fixed-top'))) { // If we scrolled back up
+		$('#navigator').addClass('navbar-static-top');
 		$('#navigator').css('margin-top', '0px'); // For some reason margin-top doesn't seem to work with just css
 		$('#navigator').removeClass('navbar-fixed-top');
-		$('#navigator').addClass('navbar-static-top');
-		$('#social-media').toggle();
 		$('#navigator').css('height', '160px');
 		$('#bodywrapper').css('padding-top', '0px');
 	}
-	windowposition = $(window).scrollTop();
 });
 	
 	$('#myTab a').click(function (e) {
