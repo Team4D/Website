@@ -5,19 +5,21 @@ $(document).ready(function(){
 	
 $(window).scroll(function (event) {
 	var scroll = $(window).scrollTop();
-	if ((scroll > 110)&&(windowposition <= 110)) { // If we scrolled down far enough
+	if ((scroll > 120)&&(windowposition < 120)) { // If we scrolled down far enough
 		$('#navigator').removeClass('navbar-static-top');
 		$('#navigator').addClass('navbar-fixed-top');
 		$('#social-media').toggle();
 		$('#navigator').css('height', '50px');
 		$('#navigator').css('margin-top', '-10px'); // For some reason margin-top doesn't seem to work with just css
+		$('#bodywrapper').css('padding-top', '150px');
 	}
-	else  if ((scroll < 110)&&(windowposition >= 110)) { // If we scrolled back up
+	else  if ((scroll < 120)&&(windowposition >= 120)) { // If we scrolled back up
 		$('#navigator').css('margin-top', '0px'); // For some reason margin-top doesn't seem to work with just css
 		$('#navigator').removeClass('navbar-fixed-top');
 		$('#navigator').addClass('navbar-static-top');
 		$('#social-media').toggle();
 		$('#navigator').css('height', '160px');
+		$('#bodywrapper').css('padding-top', '0px');
 	}
 	windowposition = $(window).scrollTop();
 });
