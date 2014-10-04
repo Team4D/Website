@@ -1,6 +1,6 @@
 /* Direct Styles */
 html,body {
-	background: #E6E6E6;
+	background: #505050;
 	height: 100%;
 	color: #000;
 }
@@ -64,9 +64,7 @@ a:link,a:active,a:visited {
 #footer {
 	text-align: center;
 	padding-top: 10px;
-	color: #f8f8f8;
-	background-color: #003D56;
-	background-color: #E6E6E6;
+	background-color: #505050;
 	color: #000;
 }
 #footer img {
@@ -77,14 +75,12 @@ a:link,a:active,a:visited {
 .navbarcontainer {
 	padding-left: 50px;
 }
-.navbar-default .navbar-toggle {
-	border-color: #e6e6e6;
-}
+
 .navbar {
 	height: 160px;
-	background-color: #D7DF23;
-	margin-bottom: 0px;
+	background-color: #A0DB24;
 	border: 0px;
+  margin-bottom:0px;
 }
 .nav {
 	position: absolute;
@@ -190,7 +186,7 @@ a:link,a:active,a:visited {
 #social-feeds {
 	padding: 40px 0px;
 	background-color: rgba(127, 190, 225, 1);
-	border-top: 10px solid #E6E6E6;
+	border-top: 10px solid #ffffff;
 }
 .jumbotron {
 	background-color: #1e8fbe;
