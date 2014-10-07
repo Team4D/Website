@@ -1,22 +1,22 @@
 $(document).ready(function(){
 	$('.carousel').carousel();
 	
-$(window).scroll(function (event) {
-	var scroll = $(window).scrollTop();
-	if ((scroll > 120)&&($('#navigator').hasClass('navbar-static-top'))) { // If we scrolled down far enough
-		$('#navigator').removeClass('navbar-static-top');
-		$('#navigator').addClass('navbar-fixed-top');
-		$('#navigator').css('margin-top', '-120px'); // For some reason margin-top doesn't seem to work with just css
-		$('#bodywrapper').css('padding-top', '150px');
-	}
-	else  if ((scroll < 120)&&($('#navigator').hasClass('navbar-fixed-top'))) { // If we scrolled back up
-		$('#navigator').addClass('navbar-static-top');
-		$('#navigator').css('margin-top', '0px'); // For some reason margin-top doesn't seem to work with just css
-		$('#navigator').removeClass('navbar-fixed-top');
-		$('#navigator').css('height', '160px');
-		$('#bodywrapper').css('padding-top', '0px');
-	}
-});
+	$(window).scroll(function (event) {
+		var scroll = $(window).scrollTop();
+		if ((scroll > 120)&&($('#navigator').hasClass('navbar-static-top'))) { // If we scrolled down far enough
+			$('#navigator').removeClass('navbar-static-top');
+			$('#navigator').addClass('navbar-fixed-top');
+			$('#navigator').css('margin-top', '-120px'); // For some reason margin-top doesn't seem to work with just css
+			$('#bodywrapper').css('padding-top', '150px');
+		}
+		else  if ((scroll < 120)&&($('#navigator').hasClass('navbar-fixed-top'))) { // If we scrolled back up
+			$('#navigator').addClass('navbar-static-top');
+			$('#navigator').css('margin-top', '0px'); // For some reason margin-top doesn't seem to work with just css
+			$('#navigator').removeClass('navbar-fixed-top');
+			$('#navigator').css('height', '160px');
+			$('#bodywrapper').css('padding-top', '0px');
+		}
+	});
 	
 	$('#myTab a').click(function (e) {
 		e.preventDefault();
@@ -42,7 +42,7 @@ $(window).scroll(function (event) {
 		$("#carousel-button-1").click();
 	});
 	
-	$(".dropdown-item").click(function() { // Closes navbar on small screens when navigating to new page
+	$(".dropdown-item, .navbar-item").click(function() { // Closes navbar on small screens when navigating to new page
 		if ($("#headnavbar").hasClass("in")) {
 			$("#xsbutton").click();
 		}
@@ -58,24 +58,22 @@ $(window).scroll(function (event) {
 	
 	$('#xsbutton').click(function() {
 		if ($('#headnavbar').hasClass('in')) {
-			$('#xsbutton').css("border-color", "#e6e6e6");
 			$('#xsbutton').css("background-color", "#064660");
 			xsexpanded = false;
 		}
 		else {
-			$('#xsbutton').css("border-color", "#41C76A");
-			$('#xsbutton').css("background-color", "#41C76A");
+			$('#xsbutton').css("background-color", "#7FBEE1;");
 			xsexpanded = true;
 		}
 	});
 	
 	$('#xsbutton').hover(function() { 
-		$('#xsbutton').css("border-color", "#41C76A"); 
-		$('#xsbutton').css("background-color", "#41C76A");
-		}, function() {
-			if (xsexpanded === false) {
-			$('#xsbutton').css("border-color", "#e6e6e6");
-			$('#xsbutton').css("background-color", "#064660");}});
+		$('#xsbutton').css("background-color", "#7FBEE1");
+	}, function() {
+		if (xsexpanded === false) {
+			$('#xsbutton').css("background-color", "#064660");
+		}
+	});
 	
 	
 	$('#carousel-main').on('slid.bs.carousel',function(){
@@ -107,5 +105,13 @@ $(window).scroll(function (event) {
 	
 	$("#Home").click(function() {
 		$(".home").addClass("active"); 
+	});
+	
+	// LoL Helper
+	$(".tab-7").click(function(){
+		$(".tab-7").removeClass("active");
+		$(this).addClass("active");
+		$(".tab-content").hide();
+		$($(this).attr("data-target")).show();
 	});
 });

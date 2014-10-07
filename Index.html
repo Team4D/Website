@@ -61,7 +61,7 @@
 		c0.828,0.457,1.557,1.057,2.133,1.774C42.177,23.597,43.188,25.718,42.478,28.938z" />
 	</g>
 	</svg>
-	<!-- SVG SOURCE ends-->
+	<!-- SVG SOURCE ends -->
 	
 	<!-- Content -->
 	<div id="bodywrapper">        
@@ -82,7 +82,7 @@
 				</div>
 				<div id="headnavbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li class="home"><a class="page-link" href="#Home-Page">Home</a></li>
+						<li class="home navbar-item"><a class="page-link" href="#Home-Page">Home</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects &amp; Fun <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
@@ -90,8 +90,8 @@
 								<li class="dropdown-item"><a href="SpaceInvaders/index.html">Space Invaders</a></li>
 							</ul>
 						</li>
-						<li><a class="page-link" href="#Team-Page">Team</a></li>
-						<li><a class="page-link" href="#About-Page">About</a></li>
+						<li class="navbar-item"><a class="page-link" href="#Team-Page">Team</a></li>
+						<li class="navbar-item"><a class="page-link" href="#About-Page">About</a></li>
 					</ul>
 				</div>
 			</div>
@@ -175,62 +175,53 @@
 		</div>
 		
 		<div id="LoLHelper-Page" class="content-bit LoLHelper-Page">
-			<div class="row row-odd row-first">
-				<h1 style="text-align: center;">LoL Helper</h1>
+			<div class="row" style="margin:15px 0px;">
+				<div class="col-sm-6 col-sm-push-6">
+					<h1>LoL Helper</h1>
+					<p>Info of app.</p>
+				</div>
+				<div class="col-sm-6 col-sm-pull-6">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Ht-z9y_cgsU" allowfullscreen></iframe>
+					</div>
+				</div>
 			</div>
-			<div class="row row-even">
-				<h3 class="visible-xs">Team Builder</h3>
-				<div class="col-sm-4" style="text-align:center;"><img src="Images/ssteambuilder.png" class="row-img img-tall"></div>
-				<div class="col-sm-8 left-text">
-					<h3 class="hidden-xs">Team Builder</h3>
+			<div class="row">
+				<div class="tab-7" data-target="#team-builder"><img src="Images/ssteambuilder.png" class="tab-img"><div>Team Builder</div></div>
+				<div class="tab-7" data-target="#player-statistics"><img src="Images/sslookup.png" class="tab-img"><div>Player Statistics</div></div>
+				<div class="tab-7" data-target="#counters"><img src="Images/sscounters.png" class="tab-img"><div>Counters</div></div>
+				<div class="tab-7" data-target="#ultimate-bravery"><img src="Images/ssultimatebravery.png" class="tab-img"><div>Ultimate Bravery</div></div>
+				<div class="tab-7" data-target="#build-guides"><img src="Images/ssbuildguides.png" class="tab-img"><div>Build Guides</div></div>
+				<div class="tab-7" data-target="#jungle-timers"><img src="Images/sstimers.png" class="tab-img"><div>Jungle Timers</div></div>
+				<div class="tab-7" data-target="#general-info"><img src="Images/sschampioninfo.png" class="tab-img"><div>General Info</div></div>
+			</div>
+			<div class="row">
+				<div id="team-builder" class="tab-content">
+					<h2>Team Builder</h3>
 					<p>A LoL Helper exclusive, Team Builder helps you choose champions that work well as a team. Select a few champions that your team has chosen and our system will recommend which other champs will be a match. If you're more advanced, then you can also select a play style to receive a set of champions custom tailored to make it so.</p>
 				</div>
-			</div>
-			<div class="row row-odd">
-				<h3 class="visible-xs">Player Statistics</h3>
-				<div class="col-sm-4 col-sm-push-8" style="text-align:center;"><img src="Images/sslookup.png" class="row-img img-tall"></div>
-				<div class="col-sm-8 col-sm-pull-4 right-text">
-					<h3 class="hidden-xs">Player Statistics</h3>
-					<p>Every player wants to know how they measure up against their prey. Player statistics lets you look up a player by summoner name and check out their statistics, even stats for temporary game modes like One For All or U.R.F. are included. </p>
+				<div id="player-statistics" class="tab-content">
+					<h2>Player Statistics</h3>
+					<p>Every player wants to know how they measure up against their prey. Player statistics lets you look up a player by summoner name and check out their statistics, even stats for temporary game modes like One For All or U.R.F. are included.</p>
 				</div>
-			</div>
-			<div class="row row-even">
-				<h3 class="visible-xs">Counters</h3>
-				<div class="col-sm-4" style="text-align:center;"><img src="Images/sscounters.png" class="row-img img-tall"></div>
-				<div class="col-sm-8 left-text">
-					<h3 class="hidden-xs">Counters</h3>
+				<div id="counters" class="tab-content">
+					<h2>Counters</h3>
 					<p>Maybe you see the champions on the other team and wet your pants. Fight that fear with the knowledge of who counters any champion. Or look up your own champion and see who you should steer clear of.</p>
 				</div>
-			</div>
-			<div class="row row-odd">
-				<h3 class="visible-xs">Ultimate Bravery</h3>
-				<div class="col-sm-4 col-sm-push-8" style="text-align:center;"><img src="Images/ssultimatebravery.png" class="row-img img-tall"></div>
-				<div class="col-sm-8 col-sm-pull-4 right-text">
-					<h3 class="hidden-xs">Ultimate Bravery</h3>
+				<div id="ultimate-bravery" class="tab-content">
+					<h2>Ultimate Bravery</h3>
 					<p>Feeling brave? Click the ultimate random button and you'll be given a champion and build. Maybe you find a new favorite, maybe you get destroyed. The randomizer will pick any item for any champion, that's more than 6 Quadrillion choices. Are you feeling lucky?</p>
 				</div>
-			</div>
-			<div class="row row-even">
-				<h3 class="visible-xs">Build Guides</h3>
-				<div class="col-sm-4" style="text-align:center;"><img src="Images/ssbuildguides.png" class="row-img img-tall"></div>
-				<div class="col-sm-8 left-text">
-					<h3 class="hidden-xs">Build Guides</h3>
+				<div id="build-guides" class="tab-content">
+					<h2>Build Guides</h3>
 					<p>If you're playing a new champion, picking the wrong item could ruin your day. Take guess work out of the equation by looking up a build guide. We've got them all.</p>
 				</div>
-			</div>
-			<div class="row row-odd">
-				<h3 class="visible-xs">Jungle Timers</h3>
-				<div class="col-sm-4 col-sm-push-8" style="text-align:center;"><img src="Images/sstimers.png" class="row-img img-tall"></div>
-				<div class="col-sm-8 col-sm-pull-4 right-text">
-					<h3 class="hidden-xs">Jungle Timers</h3>
+				<div id="jungle-timers" class="tab-content">
+					<h2>Jungle Timers</h3>
 					<p>Did you kill those golems 4 minutes ago or have they respawned already? Better set an alarm. Using our jungle timers will give you a reliable alarm for jungle spawns, freeing you to decimate your opponents in the lane and be back in time for your golem friends. Surely, they'll be glad to see you.</p>
 				</div>
-			</div>
-			<div class="row row-even">
-				<h3 class="visible-xs">General Info</h3>
-				<div class="col-sm-4" style="text-align:center;"><img src="Images/sschampioninfo.png" class="row-img img-tall"></div>
-				<div class="col-sm-8 left-text">
-					<h3 class="hidden-xs">General Info</h3>
+				<div id="general-info" class="tab-content">
+					<h2>General Info</h3>
 					<p>General Info does what it says on the tin. We put detailed information on all the champions, items, and summoner spells in one place. Research anything your heart desires between matches. You want information? Have all the information.</p>
 				</div>
 			</div>
@@ -404,15 +395,7 @@
 			&copy; Team 4th Dimension 2014 | <a href="mailto:seanstout@team4d.org">Email</a> | (785) 218-0190 | Mail<br>
 			This website is under construction<br>
 			Web design by Team 4th Dimension<br>
-			<!--Added in some cleaned up images without white background for the footer -->
-			<a target="blank" href="http://www.facebook.com/TeamFourthDimension"><img src="Images/fb_logo.png"></a>&nbsp;<a target="blank" href="http://twitter.com/OfficialTeam4D"><img src="Images/twitter_logo.png"></a><br>
-			<br>
-			<form action="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SDVF2B5Q4ALFG" method="post" target="_top">
-				<input type="hidden" name="cmd" value="_s-xclick">
-				<input type="hidden" name="hosted_button_id" value="SDVF2B5Q4ALFG">
-				<input type="image" src="Images/support-us.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-				<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-			</form>
+			<a href="http://www.facebook.com/TeamFourthDimension" target="_blank" title="Facebook"><svg class="icon" viewBox="0 0 56.693 56.693"><use xlink:href="#facebook-icon"></use></svg></a><a href="http://twitter.com/OfficialTeam4D" target="_blank" title="Twitter"><svg class="icon" viewBox="0 0 56.693 56.693"><use xlink:href="#twitter-icon"></use></svg></a><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SDVF2B5Q4ALFG" target="_blank" title="Support Us"><svg class="icon" viewBox="0 0 56.693 56.693"><use xlink:href="#paypal-icon"></use></svg></a>
 		</div>
 	</div>
 	</body>
