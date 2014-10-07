@@ -85,15 +85,11 @@ a:link,a:visited,a:hover,a:active {
 }
 
 /* Navbar Styles*/
-.navbarcontainer {
-	padding-left: 50px;
-}
-
 .navbar {
 	height: 160px;
 	background-color: #A0DB24;
 	border: 0px;
-	margin-bottom:0px;
+	margin-bottom: 0px;
 }
 .nav {
 	position: absolute;
@@ -203,7 +199,7 @@ a:link,a:visited,a:hover,a:active {
 #social-feeds {
 	padding: 40px 0px;
 	background-color: #7FBEE1;
-	border-top: 10px solid #505050;
+	border-top: 5px solid #505050;
 }
 .jumbotron {
 	background-color: #1e8fbe;
@@ -240,10 +236,10 @@ a:link,a:visited,a:hover,a:active {
 }
 .tbox.active h4 {
 	border-bottom: 1px solid transparent;
-	color: #008AB0;
+	color: #0378B9;
 }
 .tbox.active {
-	color: #009F18;
+	color: #636363;
 }
 
 /* About Styles */
