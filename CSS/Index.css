@@ -94,7 +94,7 @@ a:link,a:visited,a:hover,a:active {
 .nav {
 	position: absolute;
 	bottom: 0;
-	right: 100px;
+	right: 3%;
 	font-size: 16px;
 }
 .navbar-nav>li>a {
@@ -150,8 +150,8 @@ a:link,a:visited,a:hover,a:active {
 
 /* Common Styles (used on multiple pages) */
 .subhead {
-	padding-left: 25px;
-	padding-right: 25px;
+	/*padding-left: 25px;
+	padding-right: 25px;*/
 }
 .row {
 	margin: 0px;
@@ -159,6 +159,7 @@ a:link,a:visited,a:hover,a:active {
 .right-text {
 	text-align: right;
 }
+
 
 .left-text {
 	text-align: left;
@@ -168,31 +169,34 @@ a:link,a:visited,a:hover,a:active {
 }
 .row-img {
 	width: 100%;
-	max-width: 360px;
-	max-height: 360px;
+	/*max-width: 360px;
+	max-height: 360px;*/
 }
 .img-tall {
 	width: auto;
 	height: 100%;
 }
 .row-even {
-	background-color: #50b2e9;
+	background-color: #A0DB24;
 	color: #333;
-	padding: 10px 0px;
-	margin-top: 5px;
+	padding: 30px 0px;
+	border-top: 5px solid #505050;
 }
 .row-odd {
-	padding:10px 0px;
-	margin-top: 5px;
+	padding: 30px 0px;
+	border-top: 5px solid #505050;
 	color: #333;
-	background-color: #A6D0E7;
+	background-color: #7FBEE1;
 }
-.row-first {
-	padding-top: 10px;
+.row-even h2, .row-odd h2 {
 	margin-top: 0;
 }
+.row-first {
+	padding-top: 30px;
+	border-top: 0;
+}
 .row-last {
-	padding-bottom: 10px;
+	padding-bottom: 30px;
 }
 
 /* Home Styles */
@@ -282,10 +286,6 @@ a:link,a:visited,a:hover,a:active {
 .tab-7.active, .tab-7:hover {
 	background-color: #A0DB24;
 }
-/*.tab-7.active img, .tab-7:hover img {
-	height: 100%;
-	width: auto;
-}*/
 
 /* XS screens */
 @media (max-width: 767px) {
@@ -300,6 +300,8 @@ a:link,a:visited,a:hover,a:active {
 	}
 	.row-img {
 		margin-bottom: 10px;
+		max-height: 360px;
+		max-width: 360px;
 	}
 	.subhead {
 		padding-left: 0px;
@@ -364,7 +366,7 @@ a:link,a:visited,a:hover,a:active {
 }
 @media (max-width: 1199px) {
 	#bodywrapper {
-		min-width: 100%;
+		min-width: 404px;
 		width: 100%;
 	}
 	
