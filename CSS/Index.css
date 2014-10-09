@@ -52,6 +52,7 @@ a:link,a:visited,a:hover,a:active {
 	display: block;
 	position: absolute;
 	height: 100px;
+	top: 10px;
 	left: 30px;
 	z-index: 50;
 }
@@ -94,7 +95,7 @@ a:link,a:visited,a:hover,a:active {
 .nav {
 	position: absolute;
 	bottom: 0;
-	right: 3%;
+	right: 5%;
 	font-size: 16px;
 }
 .navbar-nav>li>a {
@@ -177,7 +178,7 @@ a:link,a:visited,a:hover,a:active {
 	height: 100%;
 }
 .row-even {
-	background-color: #A0DB24;
+	background-color: #F8D33F;
 	color: #333;
 	padding: 30px 0px;
 	border-top: 5px solid #505050;
@@ -281,14 +282,21 @@ a:link,a:visited,a:hover,a:active {
 .tab-content {
 	display: none;
 	padding: 15px;
-	background-color: #A0DB24;
+	background-color: #F8D33F;
 }
 .tab-7.active, .tab-7:hover {
-	background-color: #A0DB24;
+	background-color: #F8D33F;
 }
+
+/* SCREEN SIZE STYLES */
+/* XS: 480px
+ * SM: 768px
+ * MD: 992px
+ * LG: 1200px */
 
 /* XS screens */
 @media (max-width: 767px) {
+	/* Generic */
 	.right-text {
 		text-align: center;
 	}
@@ -316,16 +324,7 @@ a:link,a:visited,a:hover,a:active {
 	.tab-7 div {
 		display: none;
 	}
-}
-/* SM screens and larger */
-@media (min-width: 768px) {
-	.tbox {
-		display: table-cell;
-		float: none;
-	}
-}
-
-@media (max-width: 768px) {
+	/* Navbar */
 	.nav {
 		margin-top: 0px;
 		margin-bottom: 0px;
@@ -364,9 +363,23 @@ a:link,a:visited,a:hover,a:active {
 		background-color: #A0DB24;
 	}
 }
+/* SM screens and larger */
+@media (min-width: 768px) {
+	.tbox {
+		display: table-cell;
+		float: none;
+	}
+}
+/* SM screens and smaller */
+@media (max-width: 991px) {
+	.nav {
+		right: 0;
+	}
+}
+/* MD screens and smaller */
 @media (max-width: 1199px) {
 	#bodywrapper {
-		min-width: 404px;
+		min-width: 434px;
 		width: 100%;
 	}
 	
