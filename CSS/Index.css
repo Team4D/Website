@@ -18,19 +18,12 @@ h4 {
 	text-align: center;
 	font-size: 22px;
 }
-<<<<<<< HEAD
 
 h5 {
 	text-align: center;
-	font-size: 18px;
-=======
-h5 {
-text-align: center;
 	font-size: 22px;
-border-bottom: 1px solid transparent;
-color: #0378B9;
-}
->>>>>>> origin/master
+	border-bottom: 1px solid transparent;
+	color: #0378B9;
 }
 a:link,a:visited,a:active {
 	outline: none;
