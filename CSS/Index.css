@@ -14,9 +14,14 @@ h3 {
 	margin-top: 0;
 	padding-bottom: 3px;
 }
-h4, h5 {
+h4 {
 	text-align: center;
 	font-size: 22px;
+}
+
+h5 {
+	text-align: center;
+	font-size: 18px;
 }
 a:link,a:visited,a:active {
 	outline: none;
@@ -24,6 +29,14 @@ a:link,a:visited,a:active {
 a:link,a:visited,a:hover,a:active {
 	color: #428BCA;
 }
+
+.blacktext {
+	color: #000;
+}
+.blacktext:link,.blacktext:visited,.blacktext:hover,.blacktext:active{
+	color: #000;
+}
+
 .carousel-control:link {
 	color: #FFF;
 }
@@ -265,6 +278,29 @@ a:link,a:visited,a:hover,a:active {
 	border: 2px solid #808080;
 }
 
+.about-div {
+	background-color: #F8D33F;
+	border-top: 5px solid #FFFFFF;
+	border-left: 5px solid #FFFFFF;
+	border-right: 5px solid #FFFFFF;
+	border-bottom: 5px solid #FFFFFF;
+}
+
+/*.about-div.left {
+	border-left: 10px solid #FFFFFF;
+}
+
+.about-div.right {
+	border-right: 10px solid #FFFFFF;
+} */
+
+.about-div.bottom {
+	border-bottom: 10px solid #FFFFFF;
+}
+
+.about-div.top {
+	border-top: 10px solid #FFFFFF;
+}
 /* LoL Helper Styles */
 .tab-7 {
 	float: none;
