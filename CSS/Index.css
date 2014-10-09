@@ -379,7 +379,7 @@ a:link,a:visited,a:hover,a:active {
 /* MD screens and smaller */
 @media (max-width: 1199px) {
 	#bodywrapper {
-		min-width: 434px;
+		min-width: 475px;
 		width: 100%;
 	}
 	
