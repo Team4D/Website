@@ -300,13 +300,16 @@ a:link,a:visited,a:hover,a:active {
 	border-bottom: none;
 }
 .about-link:hover {
-	background-color: #FFF;
+	background-color: #7FBEE1;
 }
 .about-link:hover,.about-link:visited,.about-link:active {
 	text-decoration: none;
 }
 .about-row {
 	display: table-row;
+}
+.about-div h4 {
+	font-weight: bold;
 }
 
 /* LoL Helper Styles */

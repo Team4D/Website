@@ -109,12 +109,14 @@ $(document).ready(function(){
 	
 	// LoL Helper / Products
 	$(".tab-7").click(function(){
-		$(this).parent().children(".tab-7.active").children("img").animate({top:'0px'},100);
-		if ($(window).width() > 767) {$(this).parent().children(".tab-7.active").children("div").slideDown(100);}
-		$(this).parent().children(".active").removeClass("active");
-		$(this).addClass("active");
-		$(this).parent().parent().children("div").children(".tab-content").hide();
-		$($(this).attr("data-target")).show();
+		if ($(this).hasClass("active") === false) {
+			$(this).parent().children(".tab-7.active").children("img").animate({top:'0px'},100);
+			if ($(window).width() > 767) {$(this).parent().children(".tab-7.active").children("div").slideDown(100);}
+			$(this).parent().children(".active").removeClass("active");
+			$(this).addClass("active");
+			$(this).parent().parent().children("div").children(".tab-content").hide();
+			$($(this).attr("data-target")).show();
+		}
 	});
 	$(".tab-7 img").mouseenter(function(){
 		if ($(this).parent().hasClass("active") === false) {
