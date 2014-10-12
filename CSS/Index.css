@@ -398,6 +398,9 @@ a:link,a:visited,a:hover,a:active {
 	.tab-7 div {
 		display: none !important;
 	}
+	#social-box {
+		margin-top: 30px;
+	}
 	/* Navbar */
 	.nav {
 		margin-top: 0px;
