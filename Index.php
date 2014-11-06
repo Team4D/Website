@@ -1,3 +1,28 @@
+<?php
+date_default_timezone_set("UTC");
+// Get Directory
+define("PHP_DIR",$_SERVER["DOCUMENT_ROOT"]);
+// Get Facebook scripts
+include_once(PHP_DIR."/Scripts/facebook/autoload.php");
+// FACEBOOK FEED OPTIONS
+$FB_FEED_LENGTH = 5;
+
+use Facebook\FacebookSession;
+use Facebook\FacebookRequest;
+use Facebook\GraphObject;
+use Facebook\GraphObjectList;
+
+// Get Session
+FacebookSession::setDefaultApplication('385383954948164','1WAWGHWVDocgEZ-K725qCxMmLpc');
+$session = new FacebookSession('385383954948164|1WAWGHWVDocgEZ-K725qCxMmLpc');
+// Make Call
+$limit = $FB_FEED_LENGTH + 5;
+$request = new FacebookRequest($session, 'GET', '/726813914055905?fields=feed.limit('.$limit.'){id,from,message,created_time,picture,description,link,name}');
+$response = $request->execute();
+$graphObject = $response->getGraphObject();
+// Parse Request
+$parsedObject = $graphObject->asArray();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -180,10 +205,80 @@
 			<!-- Social Media -->
 			<div class="row" id="social-feeds">
 				<div class="col-sm-6" style="text-align:center;">
-					<!--<div class="fb-like-box" data-href="https://www.facebook.com/TeamFourthDimension" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="true"><img src="Images/fb_feed.PNG" style="height:450px;"></div>-->
-					<div style="background-color:#7FBEE1;color:#000;height:450px;text-align:center; display:table-row;">
-						<div style="display:table-cell;vertical-align:middle;font-size:40px;padding:20px ;">You can stay connected with Team 4th Dimension and its activities on Twitter, Facebook, and LinkedIn.</div>				 
-        	</div>
+					<div id="fb-social-box">
+						<div class="title">Posts
+							<div style="position:absolute;top:10px;right:15px;">
+								<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+							</div>
+						</div>
+						<div id="fb-feed">
+							<?php
+							for ($a=0,$b=0; isset($parsedObject["feed"]->data[$a])&&$b<$FB_FEED_LENGTH; $a++) {
+								// Check for message
+								if (isset($parsedObject["feed"]->data[$a]->message)) {
+									$b++;
+									// Get Data
+									$postID = $parsedObject["feed"]->data[$a]->id;
+									$actorName = $parsedObject["feed"]->data[$a]->from->name;
+									$actorID = $parsedObject["feed"]->data[$a]->from->id;
+									$message = $parsedObject["feed"]->data[$a]->message;
+									$time = $parsedObject["feed"]->data[$a]->created_time;
+									if (isset($parsedObject["feed"]->data[$a]->picture)) {
+										$picture = $parsedObject["feed"]->data[$a]->picture;
+										if (isset($parsedObject["feed"]->data[$a]->link)) $link = $parsedObject["feed"]->data[$a]->link;
+										else $link = NULL;
+										if (isset($parsedObject["feed"]->data[$a]->name)) $picName = $parsedObject["feed"]->data[$a]->name;
+										else $picName = NULL;
+									}
+									else $picture = NULL;
+									// Get Actor Image
+									$request = new FacebookRequest($session, 'GET', '/'.$actorID.'?fields=picture');
+									$response = $request->execute();
+									$graphObject = $response->getGraphObject();
+									$parsedObject2 = $graphObject->asArray();
+									$actorImg = $parsedObject2["picture"]->data->url;
+									// Parse Date
+									$dateTimePieces = explode("T",$time);
+									list($date,$time) = $dateTimePieces;
+									$datePieces = explode("-",$date);
+									list($year,$month,$day) = $datePieces;
+									$timePieces = explode("+",$time);
+									$time = $timePieces[0];
+									$timePieces = explode(":",$time);
+									list($hour,$minute,$second) = $timePieces;
+									$postTime = date("j M",mktime($hour,$minute,$second,$month,$day,$year));
+									$realTime = date("d F Y, H:i:s (e)",mktime($hour,$minute,$second,$month,$day,$year));
+									?>
+									<div class="fb-container media">
+										<a class="fb-pic media-left media-top" href="//facebook.com/<?php echo $actorID; ?>"><img src="<?php echo $actorImg; ?>" alt="<?php echo $actorName; ?>"></a>
+										<div class="fb-content media-body">
+											<h4 class="fb-title media-heading"><a href="//facebook.com/<?php echo $actorID; ?>" target="_blank"><?php echo $actorName; ?></a><span><a href="//facebook.com/<?php echo $postID; ?>" title="Time posted: <?php echo $realTime; ?>" target="_blank"><?php echo $postTime; ?></a></span></h4>
+											<?php echo $message; ?>
+											<?php
+											if ($picture !== NULL) {
+												echo "<br>";
+												if ($link !== NULL) echo '<a href="'.$link.'" target="_blank"';
+												if ($picName !== NULL) echo ' title="'.$picName.'"';
+												if ($link !== NULL) echo '>';
+												echo '<img src="'.$picture.'" style="padding-top:5px;"';
+												if ($picName !== NULL) echo ' alt="'.$picName.'"';
+												echo '>';
+												if ($link !== NULL) echo '</a>';
+											}
+											?>
+										</div>
+									</div>
+									<?php
+								}
+							}
+							/* Use for debug to see Facebook object return
+							echo print_r($parsedObject);*/
+							?>
+						</div>
+						<div id="fb-footer">
+							<button class="btn btn-default" onClick="window.open('//facebook.com/TeamFourthDimension');">Post on Team 4th Dimension's Timeline</button>
+						</div>
+					</div>
 				</div>
 				<div id="social-box" class="col-sm-6" style="text-align:center;">
 					<a class="twitter-timeline"  href="https://twitter.com/OfficialTeam4D" data-widget-id="517177959354884098">Tweets by @OfficialTeam4D</a>
@@ -495,9 +590,9 @@
 		</div>
 		
 		<div id="footer">
-			&copy; Team 4th Dimension 2014 | <a href="mailto:contact@team4d.org">contact@team4d.org</a> | (785) 218-0190<br>
-			This website is under construction<br>
+			<a href="mailto:contact@team4d.org">contact@team4d.org</a> | (785) 218-0190<br>
 			Web design by Team 4th Dimension<br>
+			&copy; Team 4th Dimension 2014<br>
 			<a href="http://www.facebook.com/TeamFourthDimension" target="_blank" title="Facebook"><svg class="icon" viewBox="0 0 56.693 56.693"><use xlink:href="#facebook-icon"></use></svg></a><a href="http://twitter.com/OfficialTeam4D" target="_blank" title="Twitter"><svg class="icon" viewBox="0 0 56.693 56.693"><use xlink:href="#twitter-icon"></use></svg></a><a href="https://www.linkedin.com/company/team-4th-dimension" target="_blank" title="LinkedIn"><svg class="icon" viewBox="0 0 56.693 56.693"><use xlink:href="#linkedin-icon"></use></svg></a><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SDVF2B5Q4ALFG" target="_blank" title="Support Us"><svg class="icon" viewBox="0 0 56.693 56.693"><use xlink:href="#paypal-icon"></use></svg></a>
 		</div>
 	</div>
