@@ -266,6 +266,85 @@ a:link,a:visited,a:hover,a:active {
 .tbox.active {
 	color: #636363;
 }
+#fb-social-box {
+	background-color: #FFF;
+	border-radius: 5px;
+	max-width: 100%;
+	min-width: 180px;
+	width: 520px;
+	padding: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#fb-social-box div, #fb-social-box p {
+	text-align: left;
+}
+#fb-social-box .title {
+	font-size: 18px;
+	font-height: 18px;
+	font-weight: bold;
+	color: #292F33;
+	border-bottom: 1px solid #E8E8E8;
+	padding: 9px;
+	position: relative;
+}
+
+.fb-container {
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-bottom: 12px;
+	border-bottom: 1px solid #E8E8E8;
+}
+.media-left img {
+	border-radius: 5px;	
+}
+.fb-title {
+	color: #000;
+	font-size: 14px;
+	text-align: left;
+	font-weight: bold;
+}
+.fb-title a:link, .fb-title a:visited, .fb-title a:hover, .fb-title a:active {
+	color: #292F33;
+}
+.fb-title span a:link, .fb-title span a:visited, .fb-title span a:active {
+	font-size: 12px;
+	color: #666;
+	font-weight: normal;
+	float: right;
+}
+.fb-title span a:hover {
+	color: #0084B4;
+}
+.fb-content {
+	font-size: 14px;
+	width: 100%;
+}
+#fb-feed {
+	height: 363px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+#fb-footer {
+	background-color: #E8E8E8;
+	padding: 8px 10px;
+	border-radius: 0px 0px 5px 5px;
+}
+.media, .media:first-child {
+	margin-top: 12px;
+}
+#fb-footer button, #fb-footer button:active {
+	width:100%;
+	padding:5px;
+	font-size:13px;
+	color:#666;
+	background-color: #FFF;
+	text-align:left;
+}
+#fb-footer button:hover {
+	background-color: #FFF;
+	border-color: #999;
+}
 
 /* About Styles */
 .about-head {
