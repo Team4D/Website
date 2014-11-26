@@ -26,6 +26,10 @@ h5 {
 	border-bottom: 1px solid transparent;
 	color: #0378B9;
 }
+textarea {
+	resize: vertical;
+	min-height: 100px;
+}
 a:link,a:visited,a:active {
 	outline: none;
 }
@@ -218,6 +222,14 @@ a:link,a:visited,a:hover,a:active {
 }
 .row-last {
 	padding-bottom: 30px;
+}
+.btn-primary {
+	background-color: #003D56;
+	border-color: #002C3E;
+}
+.btn-primary:hover {
+	background-color: #7FBEE1;
+	border-color: #5E90AB;
 }
 
 /* Home Styles */
@@ -424,6 +436,30 @@ a:link,a:visited,a:hover,a:active {
 	top: 10px;
 }
 .tab-7.active div {
+	display: none;
+}
+
+/* Application Styles */
+#Application-Page .form-control[readonly] {
+	cursor: default;
+}
+#Application-Page .form-control[readonly]:focus {
+	border-color: #CCC;
+	outline: none;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+#Application-Page .row > div,#Application-Page .input-group {
+	padding-bottom: 5px;
+}
+#Application-Page h3 {
+	padding-top: 10px;
+}
+.input-group-header .input-group-addon,.input-group-header .form-control {
+	background-color: #003D56;
+	color: #FFF;
+}
+#web-services,#mobile-services,#social-services,#other-services {
+	padding-bottom: 10px;
 	display: none;
 }
 

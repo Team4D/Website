@@ -130,4 +130,18 @@ $(document).ready(function(){
 			if ($(window).width() > 767) {$(this).parent().children("div").slideDown(100);}
 		}
 	});
+	
+	// Application Page
+	$("#web-check").prop("checked",false)
+	$("#mobile-check").prop("checked",false)
+	$("#social-check").prop("checked",false)
+	$("#other-check").prop("checked",false)
+	$(".show-service").click(function(){
+		if ($(this).prop("checked") === true) {
+			$($(this).attr("data-target")).show();
+		}
+		else {
+			$($(this).attr("data-target")).hide();
+		}
+	});
 });
