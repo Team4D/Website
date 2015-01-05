@@ -50,7 +50,11 @@ if ($TYPE == "application") {
 	$PHONE = $_POST['PHONE'];
 	$EMAIL = $_POST['EMAIL'];
 	$COMPANY_DESC = $_POST['COMPANY_DESC'];
-	if ($_POST['web-check'] == 1) {
+	$WEB_CHECK = $_POST['web-check'];
+	$MOBILE_CHECK = $_POST['mobile-check'];
+	$SOCIAL_CHECK = $_POST['social-check'];
+	$OTHER_CHECK = $_POST['other-check'];
+	if ($WEB_CHECK == 1) {
 		foreach ($web_services as $category) {
 			foreach ($category as $field) {
 				$$field["name"] = $_POST[$field["name"]];
@@ -61,7 +65,7 @@ if ($TYPE == "application") {
 			}
 		}
 	}
-	if ($_POST['mobile-check'] == 1) {
+	if ($MOBILE_CHECK == 1) {
 		foreach ($mobile_services as $category) {
 			foreach ($category as $field) {
 				$$field["name"] = $_POST[$field["name"]];
@@ -72,7 +76,7 @@ if ($TYPE == "application") {
 			}
 		}
 	}
-	if ($_POST['social-check'] == 1) {
+	if ($SOCIAL_CHECK == 1) {
 		foreach ($social_services as $category) {
 			foreach ($category as $field) {
 				$$field["name"] = $_POST[$field["name"]];
@@ -83,7 +87,7 @@ if ($TYPE == "application") {
 			}
 		}
 	}
-	if ($_POST['other-check'] == 1) {
+	if ($OTHER_CHECK == 1) {
 		$OTHER_SERVICES = $_POST['OTHER_SERVICES'];
 	}
 	$SPECS = $_POST['SPECS'];
@@ -114,15 +118,20 @@ if ($TYPE == "application") {
 	if ($SOCIAL_OTHER == 1 && $SOCIAL_OTHER_DESC == "") $ERROR[] = "Please enter a description for the other social service you would like.";
 	if ($POST['other-check'] == 1 && $OTHER_SERVICES == "") $ERROR[] = "Please enter a description for the other services you would like.";
 	if ($DEADLINE == "") $ERROR[] = "Please enter a deadline.";
-	elseif (!preg_match("#^[0-9]{2}/[0-9]{2}/[2]{1}[0-9]{3}$#",$DEADLINE)) $ERROR[] = "Deadline invalid. Please enter as MM/DD/YYYY";
+	elseif (!preg_match("#^[0-9]{2}/[0-9]{2}/[1-9]{1}[0-9]{3}$#",$DEADLINE)) $ERROR[] = "Deadline invalid. Please enter as MM/DD/YYYY.";
 	else {
 		$datePieces = explode("/",$DEADLINE);
 		list($month,$day,$year) = $datePieces;
 		if (!checkdate($month,$day,$year)) $ERROR[] = "Deadline invalid.";
+		else {
+			$currDate = date("Ymd");
+			$deadlineDate = $year.$month.$day;
+			if ($deadlineDate <= $currDate) $ERROR[] = "Deadline must be be after today.";
+		}
 	}
-	if ($SIGNATURE == "") $ERROR[] = "Please enter your digital signature";
+	if ($SIGNATURE == "") $ERROR[] = "Please enter your digital signature.";
 	if ($DATE == "") $ERROR[] = "Please enter the date.";
-	elseif (!preg_match("#^[0-9]{2}/[0-9]{2}/[2]{1}[0-9]{3}$#",$DATE)) $ERROR[] = "Date invalid. Please enter as MM/DD/YYYY";
+	elseif (!preg_match("#^[0-9]{2}/[0-9]{2}/[2]{1}[0-9]{3}$#",$DATE)) $ERROR[] = "Date invalid. Please enter as MM/DD/YYYY.";
 	else {
 		$datePieces = explode("/",$DATE);
 		list($month,$day,$year) = $datePieces;
@@ -319,7 +328,7 @@ if ($TYPE == "application") {
 	<!-- SVG SOURCE ends -->
 	
 	<!-- Content -->
-	<div id="bodywrapper">        
+	<div id="bodywrapper">
 		<!-- Navbar -->
 		<div class="navbar navbar-default navbar-static-top" id='navigator' role="navigation">
 			<div id="social-media">
@@ -346,35 +355,36 @@ if ($TYPE == "application") {
 								<li class="dropdown-item"><a href="SpaceInvaders/index.html">Space Invaders</a></li>
 							</ul>
 						</li>
-						<li class="navbar-item"><a class="page-link"  href="#Products-Page">Products</a></li>
-            <li class="navbar-item"><a class="page-link" href="#About-Page">About</a></li>
-            <li class="navbar-item"><a class="page-link" href="#Thanks-Page">Thanks</a></li>          
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li class="dropdown-item"><a class="page-link" href="#Products-Page">What We Offer</a></li>
+								<li class="dropdown-item"><a class="page-link" href="#Application-Page">Application</a></li>
+							</ul>
+						</li>
+						<li class="navbar-item"><a class="page-link" href="#About-Page">About</a></li>
+						<li class="navbar-item"><a class="page-link" href="#Thanks-Page">Thanks</a></li>          
 					</ul>
 				</div>
 			</div>
 		</div>
-		
-		<div class="row">
-			<div class="col-xs-12">
-				<?php
-				if (isset($SUCCESS)) { ?>
-					<div class="alert alert-success alert-dismissible" role="alert">
-						<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-						<?php foreach ($SUCCESS as $value) echo $value."<br>"; ?>
-					  </div>
-					<?php
-				}
-				if (isset($ERROR)) { ?>
-					<div class="alert alert-danger alert-dismissible" role="alert">
-						<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-						<?php foreach ($ERROR as $value) echo $value."<br>"; ?>
-					  </div>
-					<?php
-				}
-				?>
-			</div>
-		</div>
-		
+		<?php
+		if (isset($SUCCESS)) { ?>
+			<div class="alert alert-success alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<?php foreach ($SUCCESS as $value) echo $value."<br>"; ?>
+			  </div>
+			<?php
+		}
+		if (isset($ERROR)) { ?>
+			<div class="alert alert-danger alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<?php foreach ($ERROR as $value) echo $value."<br>"; ?>
+			  </div>
+			<?php
+		}
+		?>
+				
 		<div id="Home-Page" class="content-bit Home-Page">
         	
             <div style="padding-bottom:50px;">
@@ -507,8 +517,8 @@ if ($TYPE == "application") {
 									<?php
 								}
 							}
-							/* Use for debug to see Facebook object return
-							echo print_r($parsedObject);*/
+							// Use for debug to see Facebook object return
+							// echo print_r($parsedObject);
 							?>
 						</div>
 						<div id="fb-footer">
@@ -585,11 +595,8 @@ if ($TYPE == "application") {
 				</div>
 				<div class="col-sm-6 left-text">
 					<h2 class="headname hidden-xs">About</h2>
-					<p>
-          Team Fourth Dimension began at the University of Kansas in spring of 2014 when a group of sixteen Computer Science majors joined their keyboards to make LolHelper. That summer Alexa Varady and Thomas Ford decided to take Team Forth Dimension to the next level. In the following months they contacted the members of the original team and Murl Westheffer, Sean Stout, Su Yan, Austin Hofmann and Patrick Walter joined to expand upon the original product. Alongside Alexa and Thomas, they became the founders of Team 4th Dimension Software Solutions, and proceeded to make the team what they are today. 
-          <br><br>
-          Team 4th Dimension Software Solutions is capable of creating and designing all things software, but we specialize in web development and mobile applications. That being said, we have come together through a mutual passion and we carry that passion with us today: that passion is video games. We will continue updating and making LolHelper more useful to the League of Legends community while pursuing other gaming products in our free time.
-          </p>
+					<p>Team Fourth Dimension began at the University of Kansas in spring of 2014 when a group of sixteen Computer Science majors joined their keyboards to make LolHelper. That summer Alexa Varady and Thomas Ford decided to take Team Forth Dimension to the next level. In the following months they contacted the members of the original team and Murl Westheffer, Sean Stout, Su Yan, Austin Hofmann and Patrick Walter joined to expand upon the original product. Alongside Alexa and Thomas, they became the founders of Team 4th Dimension Software Solutions, and proceeded to make the team what they are today.</p>
+					<p>Team 4th Dimension Software Solutions is capable of creating and designing all things software, but we specialize in web development and mobile applications. That being said, we have come together through a mutual passion and we carry that passion with us today: that passion is video games. We will continue updating and making LolHelper more useful to the League of Legends community while pursuing other gaming products in our free time.</p>
 				</div>
 			</div>
 			<div class="row row-odd" style="border-top:5px solid #505050;border-bottom:5px solid #505050;">
@@ -711,10 +718,11 @@ if ($TYPE == "application") {
 			<div class="row" style="margin:15px 0px;">
 				<div class="col-sm-6 col-sm-push-6">
 					<h1>Contact</h1>
-					<p>Email: <a href="mailto:contact@team4d.org">contact@team4d.org</a></p>
-					<p>Phone: (785) 218-0190</p>
-					<p>Application: <a href="Application.pdf" target="_blank"><img src="Images/pdficon.jpg" alt="Application" style="width:50px;" /></a></p>
-					<p>To request our services, please fill out the application above and email it to us.</p>
+					<p>Email: <a href="mailto:contact@team4d.org">contact@team4d.org</a><br>
+					Phone: (785) 218-0190</p>
+					<p>To request our services, please fill out an application:<br>
+					<a href="#Application-Page">Online Form</a><br>
+					<a href="Application.pdf" target="_blank">PDF</a></p>
 				</div>
 				<div class="col-sm-6 col-sm-pull-6">
 					<h1>Our Mission</h1>
@@ -823,7 +831,7 @@ if ($TYPE == "application") {
 				<form name="application-form" method="post" action="">
 					<input name="type" type="hidden" value="application">
 					<h1>Application for Services</h1>
-					<p>Alternatively, you may <a href="Application.pdf" target="_blank">fill out the PDF</a> and mail it to us.</p>
+					<p>Alternatively, you may <a href="Application.pdf" target="_blank">fill out the PDF</a> and email it to us.</p>
 					
 					<h3>Contact Information</h3>
 					<div class="row">
@@ -838,16 +846,19 @@ if ($TYPE == "application") {
 					<div class="row">
 						<div class="col-sm-6"><input class="form-control" name="CITY" type="text" value="<?php echo $CITY; ?>" placeholder="City"></div>
 						<div class="col-sm-3">
-							<select name="STATE">
-								<option>State</option>
-								<?php
-								foreach ($states as $state) {
-									echo '<option value="'.$state.'"';
-									if ($STATE == $state) echo ' selected="selected"';
-									echo '>'.$state."</option>\n";
-								}
-								?>
-							</select>
+							<input id="state-input" name="STATE" type="hidden" value="<?php echo $STATE; ?>">
+							<div id="state-dropdown" class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									<?php if ($STATE!="") echo $STATE; else echo "State"; ?> <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<?php
+									foreach ($states as $state) {
+										echo '<li><a href="javascript:;">'.$state.'</a></li>';
+									}
+									?>
+								</ul>
+							</div>
 						</div>
 						<div class="col-sm-3"><input class="form-control" name="ZIP" type="number" value="<?php echo $ZIP; ?>" min="601" max="99950" placeholder="ZIP Code"></div>
 					</div>
@@ -866,25 +877,26 @@ if ($TYPE == "application") {
 						
 						<div class="col-md-4 col-sm-6">
 							<div class="input-group input-group-lg input-group-header">
-								<span class="input-group-addon"><input id="web-check" class="show-service" name="web-check" type="checkbox" data-target="#web-services" value="1"></span>
+								<span class="input-group-addon"><input id="web-check" class="show-service" name="web-check" type="checkbox" data-target="#web-services" value="1"<?php if ($WEB_CHECK==1) echo ' checked'; ?>></span>
 								<input class="form-control" type="text" value="Web Design Services" readonly>
 							</div>
-							<div id="web-services">
+							<div id="web-services"<?php if ($WEB_CHECK==1) echo ' style="display:block;"'; ?>>
 								<?php
 								foreach ($web_services as $category_name => $category) { ?>
 									<strong><?php echo $category_name; ?></strong>
 									<?php
 									foreach ($category as $field) {
-										if ($field["desc"] === NULL) { ?>
+										if ($field["desc"] === NULL) {
+											$varname = $field["name"]."_DESC"; ?>
 											<div class="input-group input-group-sm">
-												<span class="input-group-addon"><input name="<?php echo $field["name"]; ?>" type="checkbox" value="1"></span>
-												<input class="form-control" name="<?php echo $field["name"]; ?>_DESC" type="text"  placeholder="<?php echo $field["placeholder"]; ?>">
+												<span class="input-group-addon"><input name="<?php echo $field["name"]; ?>" type="checkbox" value="1"<?php if ($$field["name"]!="") echo ' checked'; ?>></span>
+												<input class="form-control" name="<?php echo $field["name"]; ?>_DESC" type="text" value="<?php echo $$varname; ?>" placeholder="<?php echo $field["placeholder"]; ?>">
 											</div>
 											<?php
 										}
 										else { ?>
 											<div class="input-group input-group-sm">
-												<span class="input-group-addon"><input name="<?php echo $field["name"]; ?>" type="checkbox" value="1"></span>
+												<span class="input-group-addon"><input name="<?php echo $field["name"]; ?>" type="checkbox" value="1"<?php if ($$field["name"]!="") echo ' checked'; ?>></span>
 												<input class="form-control" type="text" value="<?php echo $field["desc"]; ?>" readonly>
 											</div>
 											<?php
@@ -897,25 +909,26 @@ if ($TYPE == "application") {
 						
 						<div class="col-md-4 col-sm-6">
 							<div class="input-group input-group-lg input-group-header">
-								<span class="input-group-addon"><input id="mobile-check" class="show-service" name="mobile-check" type="checkbox" data-target="#mobile-services" value="1"></span>
+								<span class="input-group-addon"><input id="mobile-check" class="show-service" name="mobile-check" type="checkbox" data-target="#mobile-services" value="1"<?php if ($MOBILE_CHECK==1) echo ' checked'; ?>></span>
 								<input class="form-control" type="text" value="Mobile Application Services" readonly>
 							</div>
-							<div id="mobile-services">
+							<div id="mobile-services"<?php if ($MOBILE_CHECK==1) echo ' style="display:block;"'; ?>>
 								<?php
 								foreach ($mobile_services as $category_name => $category) { ?>
 									<strong><?php echo $category_name; ?></strong>
 									<?php
 									foreach ($category as $field) {
-										if ($field["desc"] === NULL) { ?>
+										if ($field["desc"] === NULL) {
+											$varname = $field["name"]."_DESC"; ?>
 											<div class="input-group input-group-sm">
-												<span class="input-group-addon"><input name="<?php echo $field["name"]; ?>" type="checkbox" value="1"></span>
-												<input class="form-control" name="<?php echo $field["name"]; ?>_DESC" type="text"  placeholder="<?php echo $field["placeholder"]; ?>">
+												<span class="input-group-addon"><input name="<?php echo $field["name"]; ?>" type="checkbox" value="1"<?php if ($$field["name"]!="") echo ' checked'; ?>></span>
+												<input class="form-control" name="<?php echo $field["name"]; ?>_DESC" type="text" value="<?php echo $$varname; ?>" placeholder="<?php echo $field["placeholder"]; ?>">
 											</div>
 											<?php
 										}
 										else { ?>
 											<div class="input-group input-group-sm">
-												<span class="input-group-addon"><input name="<?php echo $field["name"]; ?>" type="checkbox" value="1"></span>
+												<span class="input-group-addon"><input name="<?php echo $field["name"]; ?>" type="checkbox" value="1"<?php if ($$field["name"]!="") echo ' checked'; ?>></span>
 												<input class="form-control" type="text" value="<?php echo $field["desc"]; ?>" readonly>
 											</div>
 											<?php
@@ -928,25 +941,26 @@ if ($TYPE == "application") {
 						
 						<div class="col-md-4 col-sm-6">
 							<div class="input-group input-group-lg input-group-header">
-								<span class="input-group-addon"><input id="social-check" class="show-service" name="social-check" type="checkbox" data-target="#social-services" value="1"></span>
+								<span class="input-group-addon"><input id="social-check" class="show-service" name="social-check" type="checkbox" data-target="#social-services" value="1"<?php if ($SOCIAL_CHECK==1) echo ' checked'; ?>></span>
 								<input class="form-control" type="text" value="Social Media Services" readonly>
 							</div>
-							<div id="social-services">
+							<div id="social-services"<?php if ($SOCIAL_CHECK==1) echo ' style="display:block;"'; ?>>
 								<?php
 								foreach ($social_services as $category_name => $category) { ?>
 									<strong><?php echo $category_name; ?></strong>
 									<?php
 									foreach ($category as $field) {
-										if ($field["desc"] === NULL) { ?>
+										if ($field["desc"] === NULL) {
+											$varname = $field["name"]."_DESC"; ?>
 											<div class="input-group input-group-sm">
-												<span class="input-group-addon"><input name="<?php echo $field["name"]; ?>" type="checkbox" value="1"></span>
-												<input class="form-control" name="<?php echo $field["name"]; ?>_DESC" type="text"  placeholder="<?php echo $field["placeholder"]; ?>">
+												<span class="input-group-addon"><input name="<?php echo $field["name"]; ?>" type="checkbox" value="1"<?php if ($$field["name"]!="") echo ' checked'; ?>></span>
+												<input class="form-control" name="<?php echo $field["name"]; ?>_DESC" type="text" value="<?php echo $$varname; ?>" placeholder="<?php echo $field["placeholder"]; ?>">
 											</div>
 											<?php
 										}
 										else { ?>
 											<div class="input-group input-group-sm">
-												<span class="input-group-addon"><input name="<?php echo $field["name"]; ?>" type="checkbox" value="1"></span>
+												<span class="input-group-addon"><input name="<?php echo $field["name"]; ?>" type="checkbox" value="1"<?php if ($$field["name"]!="") echo ' checked'; ?>></span>
 												<input class="form-control" type="text" value="<?php echo $field["desc"]; ?>" readonly>
 											</div>
 											<?php
@@ -959,11 +973,11 @@ if ($TYPE == "application") {
 						
 						<div class="col-md-4 col-sm-6">
 							<div class="input-group input-group-lg input-group-header">
-								<span class="input-group-addon"><input id="other-check" class="show-service" name="other-check" type="checkbox" data-target="#other-services" value="1"></span>
+								<span class="input-group-addon"><input id="other-check" class="show-service" name="other-check" type="checkbox" data-target="#other-services" value="1"<?php if ($OTHER_CHECK==1) echo ' checked'; ?>></span>
 								<input class="form-control" type="text" value="Other Services" readonly>
 							</div>
-							<div id="other-services">
-								<textarea class="form-control" name="OTHER_SERVICES" value="<?php echo $OTHER_SERVICES; ?>" placeholder="Describe other services needed"></textarea>
+							<div id="other-services"<?php if ($OTHER_CHECK==1) echo ' style="display:block;"'; ?>>
+								<textarea class="form-control" name="OTHER_SERVICES" placeholder="Describe other services needed"><?php echo $OTHER_SERVICES; ?></textarea>
 							</div>
 						</div>
 					</div>

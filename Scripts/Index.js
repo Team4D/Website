@@ -132,10 +132,6 @@ $(document).ready(function(){
 	});
 	
 	// Application Page
-	$("#web-check").prop("checked",false)
-	$("#mobile-check").prop("checked",false)
-	$("#social-check").prop("checked",false)
-	$("#other-check").prop("checked",false)
 	$(".show-service").click(function(){
 		if ($(this).prop("checked") === true) {
 			$($(this).attr("data-target")).show();
@@ -143,5 +139,9 @@ $(document).ready(function(){
 		else {
 			$($(this).attr("data-target")).hide();
 		}
+	});
+	$("#state-dropdown li a").click(function(){
+		$("#state-dropdown > button").html( $(this).text() + ' <span class="caret"></span>');
+		$("#state-input").val($(this).text());
 	});
 });
