@@ -7,6 +7,28 @@ function validatePhone($number,$formats=NULL) {
 	$format = trim(ereg_replace("[0-9]", "#", $number));
 	return (in_array($format, $formats)) ? true : false;
 }
+// Validate Date
+function validateDate($date,$formats=NULL) {
+	if ($formats === NULL) {
+		$formats = array("##/##/####","##-##-####","####/##/##","####-##-##");
+	}
+	$format = trim(ereg_replace("[0-9]","#",$date));
+	return (in_array($format,$formats)) ? true : false;
+}
+// Format Date
+function formatDate($date) {
+	$date = str_replace("-","/",$date);
+	$format = trim(ereg_replace("[0-9]","#",$date));
+	$date_pieces = explode("/",$date);
+	if ($format == "##/##/####") {
+		list($month,$day,$year) = $date_pieces;
+	}
+	elseif ($format == "####/##/##") {
+		list($year,$month,$day) = $date_pieces;
+	}
+	$return = date("m/d/Y",mktime(0,0,0,$month,$day,$year));
+	return $return;
+}
 // Validate Email Address
 function validateEmail($email) {
 	// First, we check that there's one @ symbol, 

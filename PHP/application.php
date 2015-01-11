@@ -36,6 +36,13 @@ $phone_formats = array (
 	"###-###-####",
 	"##########"
 );
+// Valid Date Formats
+$date_formats = array (
+	"##/##/####",
+	"##-##-####",
+	"####/##/##",
+	"####-##-##"
+);
 // States
 $states = array(
 	"AL"=>"Alabama",

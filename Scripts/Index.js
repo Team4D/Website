@@ -131,7 +131,7 @@ $(document).ready(function(){
 		}
 	});
 	
-	// Application Page
+	// Request Page
 	$(".show-service").click(function(){
 		if ($(this).prop("checked") === true) {
 			$($(this).attr("data-target")).show();

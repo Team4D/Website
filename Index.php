@@ -109,7 +109,7 @@ if ($TYPE == "application") {
 	elseif (!preg_match("#^[0-9]{5}$#",$ZIP)) $ERROR[] = "Invalid ZIP code.";
 	elseif ($ZIP < 601 || $ZIP > 99950) $ERROR[] = "Invalid ZIP code.";
 	if ($PHONE == "") $ERROR[] = "Please enter your phone number.";
-	elseif (!validatePhone($PHONE)) $ERROR[] = "Invalid phone number.";
+	elseif (!validatePhone($PHONE,$phone_formats)) $ERROR[] = "Invalid phone number.";
 	if ($EMAIL == "") $ERROR[] = "Please enter your email address.";
 	elseif (!validateEmail($EMAIL)) $ERROR[] = "Invalid email address.";
 	if ($COMPANY_DESC == "") $ERROR[] = "Please enter a description of your company.";
@@ -118,8 +118,9 @@ if ($TYPE == "application") {
 	if ($SOCIAL_OTHER == 1 && $SOCIAL_OTHER_DESC == "") $ERROR[] = "Please enter a description for the other social service you would like.";
 	if ($POST['other-check'] == 1 && $OTHER_SERVICES == "") $ERROR[] = "Please enter a description for the other services you would like.";
 	if ($DEADLINE == "") $ERROR[] = "Please enter a deadline.";
-	elseif (!preg_match("#^[0-9]{2}/[0-9]{2}/[1-9]{1}[0-9]{3}$#",$DEADLINE)) $ERROR[] = "Deadline invalid. Please enter as MM/DD/YYYY.";
+	elseif (!validateDate($DEADLINE,$date_formats)) $ERROR[] = "Deadline invalid. Please enter as MM/DD/YYYY.";
 	else {
+		$DEADLINE = formatDate($DEADLINE);
 		$datePieces = explode("/",$DEADLINE);
 		list($month,$day,$year) = $datePieces;
 		if (!checkdate($month,$day,$year)) $ERROR[] = "Deadline invalid.";
@@ -359,7 +360,7 @@ if ($TYPE == "application") {
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
 								<li class="dropdown-item"><a class="page-link" href="#Products-Page">What We Offer</a></li>
-								<li class="dropdown-item"><a class="page-link" href="#Application-Page">Application</a></li>
+								<li class="dropdown-item"><a class="page-link" href="#Request-Page">Request Services</a></li>
 							</ul>
 						</li>
 						<li class="navbar-item"><a class="page-link" href="#About-Page">About</a></li>
@@ -720,9 +721,9 @@ if ($TYPE == "application") {
 					<h1>Contact</h1>
 					<p>Email: <a href="mailto:contact@team4d.org">contact@team4d.org</a><br>
 					Phone: (785) 218-0190</p>
-					<p>To request our services, please fill out an application:<br>
-					<a href="#Application-Page">Online Form</a><br>
-					<a href="Application.pdf" target="_blank">PDF</a></p>
+					<p>To request our services, please fill out a requisition form:<br>
+					<a href="#Request-Page">Online Form</a><br>
+					<a href="request-services.pdf" target="_blank">PDF</a></p>
 				</div>
 				<div class="col-sm-6 col-sm-pull-6">
 					<h1>Our Mission</h1>
@@ -826,12 +827,12 @@ if ($TYPE == "application") {
 			</div>
 		</div>
 		
-		<div id="Application-Page" class="content-bit Application-Page">
+		<div id="Request-Page" class="content-bit Request-Page">
 			<div class="row" style="margin:15px;">
 				<form name="application-form" method="post" action="">
 					<input name="type" type="hidden" value="application">
-					<h1>Application for Services</h1>
-					<p>Alternatively, you may <a href="Application.pdf" target="_blank">fill out the PDF</a> and email it to us.</p>
+					<h1>Request Services</h1>
+					<p>Alternatively, you may <a href="request-services.pdf" target="_blank">fill out the PDF</a> and email it to us.</p>
 					
 					<h3>Contact Information</h3>
 					<div class="row">
