@@ -21,7 +21,6 @@ h4 {
 }
 
 h5 {
-	text-align: center;
 	font-size: 22px;
 	border-bottom: 1px solid transparent;
 	color: #0378B9;
@@ -86,9 +85,6 @@ a:link,a:visited,a:hover,a:active {
 	height: 120px;
 	text-align: right;
 	padding: 5px;
-}
-.content-bit {
-	display: none;
 }
 .content-bit:target {
 	margin-top: -200px;
@@ -396,7 +392,7 @@ a:link,a:visited,a:hover,a:active {
 .about-link:hover {
 	background-color: #7FBEE1;
 }
-.about-link:hover,.about-link:visited,.about-link:active {
+.about-link:link,.about-link:hover,.about-link:active,.about-link:visited {
 	text-decoration: none;
 }
 .about-row {
@@ -404,6 +400,9 @@ a:link,a:visited,a:hover,a:active {
 }
 .about-div h4 {
 	font-weight: bold;
+}
+.about-div h5 {
+	text-align: center;
 }
 
 /* LoL Helper Styles */
@@ -420,20 +419,25 @@ a:link,a:visited,a:hover,a:active {
 	border-bottom: 2px solid #505050;
 }
 .tab-7:last-of-type {
-	border-right: 0;
+	border-right-color: #DDD;
 }
 .tab-img {
 	position: relative;
 	width: 100%;
 }
 .tab-content {
-	display: none;
 	padding: 15px;
 	background-color: #7FBEE1;
+}
+.tab-content>div {
+	display: none;
 }
 .tab-7.active, .tab-7:hover {
 	background-color: #7FBEE1;
 	border-bottom: 0;
+}
+.tab-7:last-of-type.active, .tab-7:last-of-type:hover {
+	border-right-color: #7FBEE1;
 }
 .tab-7.active img {
 	top: 10px;
@@ -443,19 +447,23 @@ a:link,a:visited,a:hover,a:active {
 }
 
 /* Application Styles */
-#Application-Page .form-control[readonly] {
+#Request-Page .form-control[readonly] {
 	cursor: default;
 }
-#Application-Page .form-control[readonly]:focus {
+#Request-Page .form-control[readonly]:focus {
 	border-color: #CCC;
 	outline: none;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
 }
-#Application-Page .row > div,#Application-Page .input-group {
+#Request-Page .row > div,#Request-Page .input-group {
 	padding-bottom: 5px;
 }
-#Application-Page h3 {
+#Request-Page h3 {
 	padding-top: 10px;
+}
+#Request-Page .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+	background-color: #7FBEE1;
+	color: #003D56;
 }
 .input-group-header .input-group-addon,.input-group-header .form-control {
 	background-color: #003D56;
@@ -479,12 +487,6 @@ a:link,a:visited,a:hover,a:active {
 /* XS screens */
 @media (max-width: 767px) {
 	/* Generic */
-	.right-text {
-		text-align: center;
-	}
-	.left-text {
-		text-align: center;
-	}
 	.visible-xs {
 		text-align: center;
 	}

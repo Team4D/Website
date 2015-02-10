@@ -27,10 +27,11 @@ $(document).ready(function(){
 		if ($(this).hasClass("dropdown")) {
 			return;
 		}
-		$("li").removeClass("active");
+		$(this).parent().children("li.active").removeClass("active");
 		$(this).addClass("active");
 	});
 	
+	/*
 	$("#Home").click(function() {
 		$("li").removeClass("active");
 		$(".home").addClass("active");
@@ -47,6 +48,7 @@ $(document).ready(function(){
 			$("#xsbutton").click();
 		}
 	});
+	*/
 	
 	$(".tbox").click(function(){
 		var slideID = $(this).attr("id");
@@ -82,6 +84,7 @@ $(document).ready(function(){
 		$("#main-text-"+slideNum).addClass("active");
 	})
 	
+	/*
 	var openPage = false;
 	var urlstring = document.URL;
 	var urllength = urlstring.length;
@@ -106,6 +109,7 @@ $(document).ready(function(){
 	$("#Home").click(function() {
 		$(".home").addClass("active"); 
 	});
+	*/
 	
 	// LoL Helper / Products
 	$(".tab-7").click(function(){
@@ -114,20 +118,20 @@ $(document).ready(function(){
 			if ($(window).width() > 767) {$(this).parent().children(".tab-7.active").children("div").slideDown(100);}
 			$(this).parent().children(".active").removeClass("active");
 			$(this).addClass("active");
-			$(this).parent().parent().children("div").children(".tab-content").hide();
+			$(this).parent().parent().children(".tab-content").children("div").hide();
 			$($(this).attr("data-target")).show();
 		}
 	});
-	$(".tab-7 img").mouseenter(function(){
-		if ($(this).parent().hasClass("active") === false) {
-			$(this).animate({top:'10px'},100);
-			$(this).parent().children("div").slideUp(100);
+	$(".tab-7").mouseenter(function(){
+		if ($(this).hasClass("active") === false) {
+			$(this).children("img").animate({top:'10px'},100);
+			$(this).children("div").slideUp(100);
 		}
 	});
-	$(".tab-7 img").mouseleave(function(){
-		if ($(this).parent().hasClass("active") === false) {
-			$(this).animate({top:'0px'},100);
-			if ($(window).width() > 767) {$(this).parent().children("div").slideDown(100);}
+	$(".tab-7").mouseleave(function(){
+		if ($(this).hasClass("active") === false) {
+			$(this).children("img").animate({top:'0px'},100);
+			if ($(window).width() > 767) {$(this).children("div").slideDown(100);}
 		}
 	});
 	
